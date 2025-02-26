@@ -1,4 +1,6 @@
+import 'package:bla_bla_in_english/providers/carts_state_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class FloatingActionBar extends StatelessWidget {
   const FloatingActionBar({
@@ -7,6 +9,8 @@ class FloatingActionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cartsState = Provider.of<CartsStateProvider>(context);
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
@@ -18,24 +22,41 @@ class FloatingActionBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconButton.filled(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.close,
+              if (cartsState.isUnFliped)
+                TextButton(
+                    onPressed: cartsState.toNextStep,
+                    child: Text(
+                      'Girar a carta!',
+                      style: TextStyle(color: Colors.black),
+                    ))
+              else if (cartsState.isFliped)
+                TextButton(
+                  onPressed: cartsState.toNextStep,
+                  child: Text(
+                    'Revelar a carta!',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                )
+              else ...[
+                IconButton.filled(
+                  onPressed: cartsState.toNextStep,
+                  icon: Icon(
+                    Icons.close,
+                  ),
                 ),
-              ),
-              IconButton.filled(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.square_outlined,
+                IconButton.filled(
+                  onPressed: cartsState.toNextStep,
+                  icon: Icon(
+                    Icons.square_outlined,
+                  ),
                 ),
-              ),
-              IconButton.filled(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.check_rounded,
+                IconButton.filled(
+                  onPressed: cartsState.toNextStep,
+                  icon: Icon(
+                    Icons.check_rounded,
+                  ),
                 ),
-              ),
+              ]
             ],
           ),
         ),
