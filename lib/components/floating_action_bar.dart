@@ -1,4 +1,4 @@
-import 'package:bla_bla_in_english/providers/carts_state_provider.dart';
+import 'package:bla_bla_in_english/providers/cards_state_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -9,16 +9,17 @@ class FloatingActionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartsState = Provider.of<CartsStateProvider>(context);
+    final cartsState = Provider.of<CardsStateProvider>(context);
+    final textTheme = Theme.of(context).textTheme;
 
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(15.0),
       child: Card(
         elevation: 8,
         color: Theme.of(context).colorScheme.primary,
         child: SizedBox(
           height: 60,
-          width: double.infinity,
+          width: double.infinity, //double.infinity,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -27,14 +28,15 @@ class FloatingActionBar extends StatelessWidget {
                     onPressed: cartsState.toNextStep,
                     child: Text(
                       'Girar a carta!',
-                      style: TextStyle(color: Colors.black),
+                      style:
+                          textTheme.bodyMedium?.copyWith(color: Colors.black),
                     ))
               else if (cartsState.isFliped)
                 TextButton(
                   onPressed: cartsState.toNextStep,
                   child: Text(
                     'Revelar a carta!',
-                    style: TextStyle(color: Colors.black),
+                    style: textTheme.bodyMedium?.copyWith(color: Colors.black),
                   ),
                 )
               else ...[
