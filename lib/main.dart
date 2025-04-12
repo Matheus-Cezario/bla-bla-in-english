@@ -1,5 +1,5 @@
 import 'package:bla_bla_in_english/pages/home_page.dart';
-import 'package:bla_bla_in_english/providers/carts_state_provider.dart';
+import 'package:bla_bla_in_english/providers/cards_state_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => CartsStateProvider(),
+          create: (_) => CardsStateProvider(),
         )
       ],
       child: MaterialApp(
@@ -29,15 +29,27 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: colorScheme,
           appBarTheme: AppBarTheme(
-            color: colorScheme.onPrimary,
+            color: colorScheme.onPrimaryFixed,
             titleTextStyle: TextStyle(
               color: Colors.white,
               fontSize: 24,
+              fontFamily: 'Poppins',
             ),
+          ),
+          textTheme: TextTheme(
+              bodyMedium: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+              bodyLarge: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+              )).apply(
+            fontFamily: 'Poppins',
           ),
           useMaterial3: true,
         ),
-        home: const HomePage(),
+        home: HomePage(),
         debugShowCheckedModeBanner: false,
       ),
     );
