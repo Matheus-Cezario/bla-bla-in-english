@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 enum CardStep {
   unFliped,
   fliped,
@@ -10,6 +12,7 @@ class CardInfos {
   final String translateSentence;
   final String englishWord;
   final String translateWord;
+  final Color color;
   CardStep cardStep = CardStep.unFliped;
 
   CardInfos(
@@ -17,7 +20,8 @@ class CardInfos {
       required this.englishSentence,
       required this.translateSentence,
       required this.englishWord,
-      required this.translateWord});
+      required this.translateWord,
+      required this.color});
 
   CardInfos copy() {
     return CardInfos(
@@ -25,6 +29,7 @@ class CardInfos {
         englishSentence: englishSentence,
         translateSentence: translateSentence,
         englishWord: englishWord,
-        translateWord: translateWord);
+        translateWord: translateWord,
+        color: color);
   }
 }

@@ -1,101 +1,37 @@
 import 'dart:ui';
-import 'package:bla_bla_in_english/animated/flip_card_animated.dart';
-import 'package:bla_bla_in_english/animated/flip_card_animated_controller.dart';
 import 'package:bla_bla_in_english/constants.dart';
 import 'package:bla_bla_in_english/models/card_infos.dart';
-import 'package:bla_bla_in_english/providers/cards_state_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:bla_bla_in_english/components/conditional_parent_widget.dart';
-import 'package:provider/provider.dart';
 
 class FlashCard extends StatefulWidget {
-  final bool isTop;
-  final double height;
-  final double width;
   final CardInfos cardInfos;
+  final void Function() onShowResolution;
 
-  FlashCard(
-      {super.key,
-      required this.isTop,
-      required this.height,
-      required this.width,
-      required this.cardInfos});
+  const FlashCard(
+      {super.key, required this.cardInfos, required this.onShowResolution});
 
   @override
   State<FlashCard> createState() => _FlashCardState();
 }
 
 class _FlashCardState extends State<FlashCard> with TickerProviderStateMixin {
-  late FlipCardController _controller;
-  late CardsStateProvider cardsStateProvider;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = FlipCardController();
-
-    if (widget.isTop) {
-      Provider.of<CardsStateProvider>(context, listen: false)
-          .addListener(listernerCardState);
-    }
-  }
-
-  @override
-  void didChangeDependencies() {
-    cardsStateProvider =
-        Provider.of<CardsStateProvider>(context, listen: false);
-    super.didChangeDependencies();
-  }
-
-  @override
-  void dispose() {
-    cardsStateProvider.removeListener(listernerCardState);
-    super.dispose();
-  }
-
-  void listernerCardState() {
-    final isAnimating = _controller.controller?.isAnimating ?? false;
-    print(isAnimating);
-    if (isAnimating) return;
-    final cartsState = Provider.of<CardsStateProvider>(context, listen: false);
-
-    if (cartsState.isFliped) {
-      _controller.toggleCard();
-    }
-  }
+  bool showResolution = false;
 
   @override
   Widget build(BuildContext context) {
-    final cartsState =
-        Provider.of<CardsStateProvider>(context, listen: widget.isTop);
-    // final showingFront = !(_controller.state?.isFront ?? true);
-
-    // if (cartsState.isFliped && !showingFront) {
-    //   _controller.toggleCard();
-    // }
-
-    return FlipCard(
-      flipOnTouch: false,
-      controller: _controller,
-      fill: Fill
-          .fillBack, // Fill the back side of the card to make in the same size as the front.
-      side: CardSide.BACK,
-      back: BackCard(
-        height: widget.height,
-        width: widget.width,
-        isTop: widget.isTop,
-      ),
-      front: FrontCard(
-        height: widget.height,
-        width: widget.width,
-        cardInfos: widget.cardInfos,
-        showResolution: widget.isTop && cartsState.isReveled,
-      ),
-      // onTapFlipping: isTop,
-      // controller: _controller,
-      // rotateSide: RotateSide.bottom,
-      // disableSplashEffect: true,
-      // frontSideUp: cartsState.isFliped,
+    final screenWidth = MediaQuery.of(context).size.width;
+    final width = screenWidth * 0.75;
+    final height = MediaQuery.of(context).size.height * 0.55;
+    return FrontCard(
+      height: height,
+      width: width,
+      cardInfos: widget.cardInfos,
+      showResolution: showResolution,
+      onShowResolution: () => setState(() {
+        showResolution = true;
+        widget.onShowResolution();
+      }),
     );
   }
 }
@@ -105,32 +41,48 @@ class FrontCard extends StatelessWidget {
   final double width;
   final CardInfos cardInfos;
   final bool showResolution;
+  final void Function() onShowResolution;
   const FrontCard({
     super.key,
     required this.height,
     required this.width,
     required this.cardInfos,
     required this.showResolution,
+    required this.onShowResolution,
   });
 
   Widget _buildSentence(
       BuildContext context, List<String> sentenceInParts, String mainWord,
-      {bool hasBlur = false}) {
+      {bool hasBlur = false, void Function()? onTap}) {
     final bodyLargeTheme = Theme.of(context).textTheme.bodyLarge;
+    final bodyMediumTheme = Theme.of(context).textTheme.bodyMedium?.copyWith(
+          fontWeight: FontWeight.bold,
+        );
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: ConditionalParentWidget(
             wrapInParent: hasBlur,
-            buildParent: (child) => ImageFiltered(
-              imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-              child: child,
+            buildParent: (child) => Stack(
+              alignment: Alignment.center,
+              children: [
+                ImageFiltered(
+                  imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                  child: child,
+                ),
+                TextButton(
+                  onPressed: onTap,
+                  child: Text(
+                    'Clique para mostrar a tradução',
+                    textAlign: TextAlign.center,
+                    style: bodyMediumTheme,
+                  ),
+                )
+              ],
             ),
             child: RichText(
               text: TextSpan(
-                // Note: Styles for TextSpans must be explicitly defined.
-                // Child text spans will inherit styles from parent
                 style: bodyLargeTheme,
                 children: sentenceInParts.map((sentencePart) {
                   return TextSpan(
@@ -161,7 +113,6 @@ class FrontCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
         ),
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Padding(
               padding: const EdgeInsets.only(
@@ -183,53 +134,9 @@ class FrontCard extends StatelessWidget {
               cardInfos.translateSentence.split(sentenceDivider),
               cardInfos.translateWord,
               hasBlur: !showResolution,
+              onTap: !showResolution ? onShowResolution : null,
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class BackCard extends StatelessWidget {
-  final double height;
-  final double width;
-  final bool isTop;
-  const BackCard({
-    super.key,
-    required this.height,
-    required this.width,
-    required this.isTop,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: isTop ? 13 : 5,
-      child: Container(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/image/large-triangles.png'),
-              repeat: ImageRepeat.repeat,
-              colorFilter: ColorFilter.mode(
-                  Theme.of(context).colorScheme.onPrimaryFixed,
-                  BlendMode.color)),
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.black, width: 2),
-        ),
-        child: Center(
-          child: Text(
-            'Blá Blá in English',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: 80,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
         ),
       ),
     );
