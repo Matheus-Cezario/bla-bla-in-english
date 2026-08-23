@@ -43,3 +43,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+tool/.dictionary_cache.jsonl
+tool/_batch.py
+tool/.dictionary_cache.bak.jsonl
+tool/.dictionary_cache.jsonl.bak
+tool/_batch_data.py

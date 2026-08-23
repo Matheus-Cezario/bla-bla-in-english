@@ -1,0 +1,27 @@
+# Frequency-ordered English word list, most common first.
+# One word per line. Blank lines and '#' comments are ignored.
+# The line position becomes frequency_rank, which is the order the app
+# introduces new words in.
+#
+# Replace this with a real frequency list (COCA, SUBTLEX, google-10000-english)
+# to run the full 30k generation.
+book
+light
+run
+bank
+play
+right
+set
+hold
+draw
+break
+turn
+watch
+mind
+point
+face
+line
+place
+part
+case
+change
