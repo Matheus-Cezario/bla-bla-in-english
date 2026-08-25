@@ -1,33 +1,11 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:bla_bla_in_english/data/schema.dart';
+import 'package:bla_bla_in_english/data/stable_id.dart';
 import 'package:crypto/crypto.dart';
 import 'package:sqlite3/sqlite3.dart';
 
-import 'dictionary_content.dart';
-
-/// A row id derived from [key] rather than from insertion order.
-///
-/// The app stores the user's progress against `word_id` and `sentence_id` in a
-/// separate database that survives a dictionary swap. With autoincrement ids,
-/// regenerating the dictionary — adding words, pruning junk, fixing a typo —
-/// renumbers everything, and every existing install silently re-points its
-/// history at different words: "you got *bank* wrong" becomes "you got *and*
-/// wrong". Deriving the id from the word itself keeps progress attached to the
-/// word it was earned on.
-///
-/// 63 bits, so the value is always a positive SQLite INTEGER. For a dictionary
-/// of this size the collision probability is around 1 in 20 billion, and
-/// [writeDictionary] fails loudly if one ever happens.
-int stableId(String key) {
-  final digest = sha256.convert(utf8.encode(key)).bytes;
-  var value = 0;
-  for (var i = 0; i < 8; i++) {
-    value = (value << 8) | digest[i];
-  }
-  return value & 0x7FFFFFFFFFFFFFFF;
-}
+import 'package:bla_bla_in_english/services/dictionary_content.dart';
 
 /// Writes [entries] to a fresh dictionary file at [path].
 ///
@@ -82,7 +60,7 @@ void writeDictionary(List<WordEntry> entries, String path) {
 
       for (final (index, sentence) in entry.sentences.indexed) {
         final position = index + 1;
-        final sentenceId = stableId('${entry.word}:$position');
+        final sentenceId = sentenceIdFor(entry.word, position);
         claim(sentenceId, '${entry.word} sentence $position');
         insertSentence.execute([sentenceId, wordId, position, sentence.text]);
 
@@ -91,7 +69,7 @@ void writeDictionary(List<WordEntry> entries, String path) {
           (1, sentence.near),
           (2, sentence.wrong),
         ]) {
-          final optionId = stableId('${entry.word}:$position:$kind');
+          final optionId = optionIdFor(entry.word, position, kind);
           claim(optionId, '${entry.word} sentence $position option $kind');
           insertOption.execute([optionId, sentenceId, text, kind]);
         }

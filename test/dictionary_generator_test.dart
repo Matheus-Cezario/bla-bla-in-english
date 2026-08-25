@@ -2,8 +2,9 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
-import '../tool/deepseek_client.dart';
-import '../tool/dictionary_content.dart';
+import 'package:bla_bla_in_english/data/stable_id.dart';
+import 'package:bla_bla_in_english/services/deepseek_client.dart';
+import 'package:bla_bla_in_english/services/dictionary_content.dart';
 import '../tool/generate_dictionary.dart';
 import '../tool/write_dictionary.dart';
 import 'package:bla_bla_in_english/data/dictionary_assets.dart';

@@ -18,19 +18,41 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  final TextEditingController _apiKey = TextEditingController();
+
   int? _wordsPerDay;
   bool _busy = false;
+  bool _showKey = false;
 
   @override
   void initState() {
     super.initState();
     _loadWordsPerDay();
+    _loadApiKey();
+  }
+
+  @override
+  void dispose() {
+    _apiKey.dispose();
+    super.dispose();
+  }
+
+  Future<void> _loadApiKey() async {
+    final key = await context.read<SettingsRepository>().deepSeekApiKey();
+    if (mounted) setState(() => _apiKey.text = key ?? '');
   }
 
   Future<void> _loadWordsPerDay() async {
     final value = await context.read<SettingsRepository>().wordsPerDay();
     if (mounted) setState(() => _wordsPerDay = value);
   }
+
+  /// Saved on every keystroke rather than behind a button: there is nothing to
+  /// validate locally — only DeepSeek can say whether a key works — and a
+  /// half-typed key that silently never got saved is a worse failure than one
+  /// saved a moment early.
+  Future<void> _saveApiKey(String value) =>
+      context.read<SettingsRepository>().setDeepSeekApiKey(value);
 
   Future<void> _save(int value) async {
     setState(() => _wordsPerDay = value);
@@ -177,6 +199,16 @@ class _SettingsPageState extends State<SettingsPage> {
                   const SizedBox(height: 36),
                   const Divider(color: optionBorderColor),
                   const SizedBox(height: 24),
+                  _ApiKeySection(
+                    controller: _apiKey,
+                    obscured: !_showKey,
+                    onChanged: _saveApiKey,
+                    onToggleVisibility: () =>
+                        setState(() => _showKey = !_showKey),
+                  ),
+                  const SizedBox(height: 36),
+                  const Divider(color: optionBorderColor),
+                  const SizedBox(height: 24),
                   _BackupSection(
                     busy: _busy,
                     onExport: _exportBackup,
@@ -185,6 +217,72 @@ class _SettingsPageState extends State<SettingsPage> {
                 ],
               ),
             ),
+    );
+  }
+}
+
+/// Where the user puts their own DeepSeek key.
+///
+/// Optional by design: with no key the app is exactly what it was, and nothing
+/// ever leaves the phone. With one, the search screen can create the word that
+/// is missing from the dictionary.
+class _ApiKeySection extends StatelessWidget {
+  const _ApiKeySection({
+    required this.controller,
+    required this.obscured,
+    required this.onChanged,
+    required this.onToggleVisibility,
+  });
+
+  final TextEditingController controller;
+  final bool obscured;
+  final ValueChanged<String> onChanged;
+  final VoidCallback onToggleVisibility;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Chave do DeepSeek', style: Theme.of(context).textTheme.bodyLarge),
+        const SizedBox(height: 8),
+        Text(
+          'Opcional. Com uma chave configurada, quando você buscar uma palavra '
+          'que não existe no dicionário o app pode pedir ao DeepSeek para '
+          'criá-la — com as cinco frases e as opções, igual às que já vêm no '
+          'app. Cada palavra é uma requisição paga na sua conta.',
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+        const SizedBox(height: 16),
+        TextField(
+          controller: controller,
+          onChanged: onChanged,
+          obscureText: obscured,
+          autocorrect: false,
+          enableSuggestions: false,
+          decoration: InputDecoration(
+            hintText: 'sk-...',
+            filled: true,
+            fillColor: optionColor,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(color: optionBorderColor),
+            ),
+            suffixIcon: IconButton(
+              onPressed: onToggleVisibility,
+              icon: Icon(obscured ? Icons.visibility : Icons.visibility_off),
+              tooltip: obscured ? 'Mostrar' : 'Esconder',
+            ),
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          'A chave fica só neste aparelho e é removida do arquivo de backup '
+          'antes de ele ser compartilhado.',
+          style:
+              Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 13),
+        ),
+      ],
     );
   }
 }

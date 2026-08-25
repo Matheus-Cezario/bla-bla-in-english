@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:bla_bla_in_english/data/schema.dart';
+import 'package:bla_bla_in_english/repositories/settings_repository.dart';
 import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
 
@@ -41,6 +42,9 @@ class BackupRepository {
 
   static const String _stagingName = 'restore-staging.db';
 
+  /// The schema an outgoing copy is attached under while it is being cleaned.
+  static const String _exportAlias = 'outgoing';
+
   /// The progress tables and the columns copied out of them, listed so a
   /// restore never depends on two files happening to declare their columns in
   /// the same order.
@@ -68,6 +72,18 @@ class BackupRepository {
       'answered_at',
     ],
     'settings': ['key', 'value'],
+    'custom_words': ['id', 'word', 'frequency_rank', 'created_at'],
+    'custom_sentences': ['id', 'word_id', 'position', 'text'],
+    'custom_options': ['id', 'sentence_id', 'text', 'kind'],
+  };
+
+  /// Tables added after the first release. A backup taken before they existed
+  /// is still perfectly good — it just has nothing to say about them — so a
+  /// restore skips the ones the file does not carry instead of refusing it.
+  static const Set<String> _sinceVersion2 = {
+    'custom_words',
+    'custom_sentences',
+    'custom_options',
   };
 
   /// Writes a copy of the progress database and returns it, ready to be handed
@@ -88,7 +104,31 @@ class BackupRepository {
     directory.createSync(recursive: true);
 
     final target = p.join(directory.path, fileNameFor(at ?? DateTime.now()));
-    return File(_db.path).copy(target);
+    final copy = await File(_db.path).copy(target);
+
+    // The settings table holds the user's DeepSeek key, and this file is about
+    // to be handed to a share sheet — mailed to themselves, dropped in Drive,
+    // sent through whatever they pick. A backup must not carry a live API key
+    // out of the device. Stripped from the copy, so the running app keeps it.
+    await _stripSecrets(copy);
+    return copy;
+  }
+
+  /// Deletes the rows that must never leave the phone from an exported copy.
+  ///
+  /// Attached rather than opened separately: this connection is already the one
+  /// holding the database open, and a second handle on a sibling file is one
+  /// more thing to get wrong.
+  Future<void> _stripSecrets(File copy) async {
+    await _db.execute('ATTACH DATABASE ? AS $_exportAlias', [copy.path]);
+    try {
+      await _db.rawDelete(
+        'DELETE FROM $_exportAlias.settings WHERE key = ?',
+        [SettingsRepository.deepSeekApiKeyKey],
+      );
+    } finally {
+      await _db.execute('DETACH DATABASE $_exportAlias');
+    }
   }
 
   /// `bla-bla-progresso-2026-08-24.db`
@@ -123,7 +163,7 @@ class BackupRepository {
     }
 
     try {
-      await _verify();
+      final present = await _verify();
       final summary = await _summarise();
 
       await _db.transaction((txn) async {
@@ -131,6 +171,7 @@ class BackupRepository {
           await txn.delete(table);
         }
         for (final entry in _tables.entries) {
+          if (!present.contains(entry.key)) continue;
           final columns = entry.value.join(', ');
           await txn.rawInsert(
             'INSERT INTO ${entry.key} ($columns) '
@@ -149,16 +190,24 @@ class BackupRepository {
   /// Refuses anything that is not this app's progress database before a single
   /// row is deleted. A restore is destructive; finding out halfway through that
   /// the file was the dictionary is too late.
-  Future<void> _verify() async {
+  ///
+  /// Returns the tables the backup actually carries, so the copy that follows
+  /// knows which ones an older file simply does not have.
+  Future<Set<String>> _verify() async {
     final version = Sqflite.firstIntValue(
       await _db.rawQuery('PRAGMA $_restoreAlias.user_version'),
     );
-    if (version != progressSchemaVersion) {
+    if (version == null || version == 0) {
+      throw const BackupFormatException(
+        'Esse arquivo não é um backup do Blá Blá in English.',
+      );
+    }
+    // Older is fine — the tables it lacks are simply skipped. Newer is not:
+    // this build has no idea what changed and would drop it on the floor.
+    if (version > progressSchemaVersion) {
       throw BackupFormatException(
-        version == 0
-            ? 'Esse arquivo não é um backup do Blá Blá in English.'
-            : 'Esse backup é da versão $version do app e esta espera a '
-                '$progressSchemaVersion.',
+        'Esse backup é de uma versão mais nova do app (v$version). '
+        'Atualize o app antes de restaurar.',
       );
     }
 
@@ -168,12 +217,15 @@ class BackupRepository {
       ))
         row['name']! as String,
     };
-    final missing = _tables.keys.where((table) => !present.contains(table));
+    final missing = _tables.keys
+        .where((table) => !present.contains(table))
+        .where((table) => !_sinceVersion2.contains(table));
     if (missing.isNotEmpty) {
       throw BackupFormatException(
         'O backup está incompleto: falta ${missing.join(', ')}.',
       );
     }
+    return present;
   }
 
   Future<BackupSummary> _summarise() async {

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:bla_bla_in_english/data/dictionary_assets.dart';
 import 'package:bla_bla_in_english/data/schema.dart';
+import 'package:bla_bla_in_english/repositories/custom_word_repository.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
@@ -48,6 +49,10 @@ class AppDatabase {
       [dictionaryPath],
     );
 
+    // A dictionary update replaces that file wholesale, taking any word the
+    // user had created with it. This puts them back.
+    await CustomWordRepository(database).replayIntoDictionary();
+
     return _instance = AppDatabase._(database);
   }
 
@@ -82,7 +87,14 @@ class AppDatabase {
   }
 
   static Future<void> _migrateProgress(Database db, int from, int to) async {
-    // No migrations yet; progressSchemaVersion is still 1.
+    // v1 -> v2: words the user has generated on the phone.
+    if (from < 2) {
+      final batch = db.batch();
+      for (final statement in customWordSchema) {
+        batch.execute(statement);
+      }
+      await batch.commit(noResult: true);
+    }
   }
 
   Future<void> close() async {

@@ -16,7 +16,7 @@ library;
 const String dictionaryAlias = 'dict';
 
 /// Bump together with a migration in `AppDatabase._migrateProgress`.
-const int progressSchemaVersion = 1;
+const int progressSchemaVersion = 2;
 
 /// Bump when the generator changes the dictionary layout. The app refuses to
 /// run against a dictionary built for a different version.
@@ -119,6 +119,49 @@ const List<String> progressSchema = [
   CREATE TABLE settings (
     key    TEXT PRIMARY KEY,
     value  TEXT NOT NULL
+  )
+  ''',
+  ...customWordSchema,
+];
+
+/// Words the user had generated on the phone, mirrored out of the dictionary.
+///
+/// These live in `progress.db` rather than only in `dictionary.db` because the
+/// dictionary is a shipped asset: every regeneration replaces that file whole,
+/// which would quietly delete the words the user asked for and paid for. This
+/// is the authoritative copy; `AppDatabase` replays it into whatever dictionary
+/// is installed. Same columns as the dictionary's own tables, so the replay is
+/// a plain INSERT ... SELECT.
+///
+/// Ids come from `stableId`, exactly as the generator derives them, so a word
+/// created here and later shipped for real is the same row — and the progress
+/// earned on it carries over instead of being orphaned.
+const List<String> customWordSchema = [
+  '''
+  CREATE TABLE custom_words (
+    id              INTEGER PRIMARY KEY,
+    word            TEXT    NOT NULL UNIQUE,
+    frequency_rank  INTEGER NOT NULL,
+    created_at      INTEGER NOT NULL
+  )
+  ''',
+  '''
+  CREATE TABLE custom_sentences (
+    id        INTEGER PRIMARY KEY,
+    word_id   INTEGER NOT NULL REFERENCES custom_words (id) ON DELETE CASCADE,
+    position  INTEGER NOT NULL,
+    text      TEXT    NOT NULL,
+    UNIQUE (word_id, position)
+  )
+  ''',
+  '''
+  CREATE TABLE custom_options (
+    id           INTEGER PRIMARY KEY,
+    sentence_id  INTEGER NOT NULL
+                 REFERENCES custom_sentences (id) ON DELETE CASCADE,
+    text         TEXT    NOT NULL,
+    kind         INTEGER NOT NULL,
+    UNIQUE (sentence_id, kind)
   )
   ''',
 ];
