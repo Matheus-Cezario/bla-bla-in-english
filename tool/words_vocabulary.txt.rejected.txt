@@ -29,6 +29,7 @@ e	shorter than 3 letters
 am	shorter than 3 letters
 me	shorter than 3 letters
 s	shorter than 3 letters
+services	plural of "service", which is already in the list
 x	shorter than 3 letters
 n	shorter than 3 letters
 re	shorter than 3 letters
@@ -46,8 +47,9 @@ years	plural of "year", which is already in the list
 items	plural of "item", which is already in the list
 r	shorter than 3 letters
 de	shorter than 3 letters
-does	plural of "do", which is already in the list
+does	plural of "doe", which is already in the list
 reviews	plural of "review", which is already in the list
+games	plural of "game", which is already in the list
 days	plural of "day", which is already in the list
 p	shorter than 3 letters
 f	shorter than 3 letters
@@ -57,11 +59,13 @@ details	plural of "detail", which is already in the list
 terms	plural of "term", which is already in the list
 hotels	plural of "hotel", which is already in the list
 results	plural of "result", which is already in the list
-states	plural of "stat", which is already in the list
+states	plural of "state", which is already in the list
 l	shorter than 3 letters
 w	shorter than 3 letters
 o	shorter than 3 letters
+prices	plural of "price", which is already in the list
 website	abbreviation or web jargon
+pages	plural of "page", which is already in the list
 uk	shorter than 3 letters
 sports	plural of "sport", which is already in the list
 g	shorter than 3 letters
@@ -71,11 +75,13 @@ systems	plural of "system", which is already in the list
 download	abbreviation or web jargon
 h	shorter than 3 letters
 per	abbreviation or web jargon
+resources	plural of "resource", which is already in the list
 posts	plural of "post", which is already in the list
+pictures	plural of "picture", which is already in the list
 students	plural of "student", which is already in the list
 v	shorter than 3 letters
-times	plural of "tim", which is already in the list
-sites	plural of "sit", which is already in the list
+times	plural of "time", which is already in the list
+sites	plural of "site", which is already in the list
 events	plural of "event", which is already in the list
 john	proper noun
 hours	plural of "hour", which is already in the list
@@ -83,16 +89,19 @@ k	shorter than 3 letters
 y	shorter than 3 letters
 cd	shorter than 3 letters
 tools	plural of "tool", which is already in the list
+movies	plural of "movie", which is already in the list
 york	proper noun
 jobs	plural of "job", which is already in the list
 j	shorter than 3 letters
 u	shorter than 3 letters
 canada	proper noun
 categories	plural of "category", which is already in the list
+sales	plural of "sale", which is already in the list
 conditions	plural of "condition", which is already in the list
 windows	abbreviation or web jargon
 photos	plural of "photo", which is already in the list
 june	proper noun
+features	plural of "feature", which is already in the list
 tv	shorter than 3 letters
 accessories	plural of "accessory", which is already in the list
 forums	plural of "forum", which is already in the list
@@ -101,27 +110,32 @@ questions	plural of "question", which is already in the list
 yahoo	abbreviation or web jargon
 dec	abbreviation or web jargon
 pc	shorter than 3 letters
+articles	plural of "article", which is already in the list
+issues	plural of "issue", which is already in the list
 users	plural of "user", which is already in the list
 things	plural of "thing", which is already in the list
 blog	abbreviation or web jargon
 login	abbreviation or web jargon
 programs	plural of "program", which is already in the list
 offers	plural of "offer", which is already in the list
+stores	plural of "store", which is already in the list
 q	shorter than 3 letters
 options	plural of "option", which is already in the list
-rates	plural of "rat", which is already in the list
+rates	plural of "rate", which is already in the list
 young	proper noun
 america	proper noun
 ii	shorter than 3 letters
 activities	plural of "activity", which is already in the list
 girls	plural of "girl", which is already in the list
 z	shorter than 3 letters
+changes	plural of "change", which is already in the list
 ca	shorter than 3 letters
 texas	proper noun
 oct	abbreviation or web jargon
 nov	abbreviation or web jargon
 groups	plural of "group", which is already in the list
 al	shorter than 3 letters
+files	plural of "file", which is already in the list
 china	proper noun
 needs	plural of "need", which is already in the list
 areas	plural of "area", which is already in the list
@@ -139,12 +153,16 @@ stories	plural of "story", which is already in the list
 computers	plural of "computer", which is already in the list
 reports	plural of "report", which is already in the list
 co	shorter than 3 letters
+images	plural of "image", which is already in the list
+includes	plural of "include", which is already in the list
 australia	proper noun
 others	plural of "other", which is already in the list
 months	plural of "month", which is already in the list
 friends	plural of "friend", which is already in the list
 faq	abbreviation or web jargon
 cars	plural of "car", which is already in the list
+messages	plural of "message", which is already in the list
+provides	plural of "provide", which is already in the list
 david	proper noun
 green	proper noun
 studies	plural of "study", which is already in the list
@@ -164,10 +182,11 @@ url	abbreviation or web jargon
 parts	plural of "part", which is already in the list
 aug	abbreviation or web jargon
 downloads	abbreviation or web jargon
-miles	plural of "mil", which is already in the list
+miles	plural of "mile", which is already in the list
 applications	plural of "application", which is already in the list
 apr	abbreviation or web jargon
 hosting	abbreviation or web jargon
+rules	plural of "rule", which is already in the list
 tickets	plural of "ticket", which is already in the list
 requirements	plural of "requirement", which is already in the list
 via	abbreviation or web jargon
@@ -187,16 +206,18 @@ words	plural of "word", which is already in the list
 linux	abbreviation or web jargon
 jul	abbreviation or web jargon
 james	proper noun
+archives	plural of "archive", which is already in the list
 points	plural of "point", which is already in the list
 jun	abbreviation or web jargon
 toys	plural of "toy", which is already in the list
 methods	plural of "method", which is already in the list
+makes	plural of "make", which is already in the list
 policies	plural of "policy", which is already in the list
 india	proper noun
 listings	plural of "listing", which is already in the list
 models	plural of "model", which is already in the list
 michael	proper noun
-cases	plural of "cas", which is already in the list
+cases	plural of "case", which is already in the list
 florida	proper noun
 paul	proper noun
 sony	abbreviation or web jargon
@@ -212,9 +233,10 @@ french	proper noun
 oh	shorter than 3 letters
 japan	proper noun
 loans	plural of "loan", which is already in the list
+shoes	plural of "shoe", which is already in the list
 orders	plural of "order", which is already in the list
 africa	proper noun
-notes	plural of "not", which is already in the list
+notes	plural of "note", which is already in the list
 king	proper noun
 pics	abbreviation or web jargon
 ad	shorter than 3 letters
@@ -222,13 +244,15 @@ players	plural of "player", which is already in the list
 supplies	plural of "supply", which is already in the list
 views	plural of "view", which is already in the list
 plans	plural of "plan", which is already in the list
+types	plural of "type", which is already in the list
+lines	plural of "line", which is already in the list
 benefits	plural of "benefit", which is already in the list
 ny	shorter than 3 letters
 pdf	abbreviation or web jargon
 weeks	plural of "week", which is already in the list
 dc	shorter than 3 letters
 mon	abbreviation or web jargon
-names	plural of "nam", which is already in the list
+names	plural of "name", which is already in the list
 robert	proper noun
 homepage	abbreviation or web jargon
 skills	plural of "skill", which is already in the list
@@ -240,17 +264,23 @@ facilities	plural of "facility", which is already in the list
 zip	abbreviation or web jargon
 sellers	plural of "seller", which is already in the list
 opportunities	plural of "opportunity", which is already in the list
+values	plural of "value", which is already in the list
 ok	shorter than 3 letters
 returns	plural of "return", which is already in the list
 england	proper noun
 ms	shorter than 3 letters
 george	proper noun
 fri	abbreviation or web jargon
+courses	plural of "course", which is already in the list
 hi	shorter than 3 letters
 levels	plural of "level", which is already in the list
+phones	plural of "phone", which is already in the list
 ideas	plural of "idea", which is already in the list
+releases	plural of "release", which is already in the list
 wed	abbreviation or web jargon
+homes	plural of "home", which is already in the list
 virginia	proper noun
+cnet	abbreviation or web jargon
 ltd	abbreviation or web jargon
 hp	shorter than 3 letters
 rooms	plural of "room", which is already in the list
@@ -260,7 +290,7 @@ thomas	proper noun
 numbers	plural of "number", which is already in the list
 eg	shorter than 3 letters
 documents	plural of "document", which is already in the list
-comes	plural of "com", which is already in the list
+comes	plural of "come", which is already in the list
 ip	shorter than 3 letters
 cameras	plural of "camera", which is already in the list
 brown	proper noun
@@ -271,6 +301,7 @@ chicago	proper noun
 forms	plural of "form", which is already in the list
 tue	abbreviation or web jargon
 smith	proper noun
+sources	plural of "source", which is already in the list
 mexico	proper noun
 pa	shorter than 3 letters
 operations	plural of "operation", which is already in the list
@@ -295,6 +326,7 @@ thus	plural of "thu", which is already in the list
 ie	shorter than 3 letters
 el	shorter than 3 letters
 partners	plural of "partner", which is already in the list
+guides	plural of "guide", which is already in the list
 ma	shorter than 3 letters
 amazon	abbreviation or web jargon
 patients	plural of "patient", which is already in the list
@@ -307,6 +339,7 @@ technologies	plural of "technology", which is already in the list
 animals	plural of "animal", which is already in the list
 ways	plural of "way", which is already in the list
 est	abbreviation or web jargon
+takes	plural of "take", which is already in the list
 gmt	abbreviation or web jargon
 searches	plural of "search", which is already in the list
 xml	abbreviation or web jargon
@@ -318,15 +351,16 @@ fl	shorter than 3 letters
 chinese	proper noun
 mb	shorter than 3 letters
 asia	proper noun
-uses	plural of "us", which is already in the list
+uses	plural of "use", which is already in the list
 funds	plural of "fund", which is already in the list
 mr	shorter than 3 letters
+employees	plural of "employee", which is already in the list
 artists	plural of "artist", which is already in the list
 java	abbreviation or web jargon
 seems	plural of "seem", which is already in the list
 relations	plural of "relation", which is already in the list
 contains	plural of "contain", which is already in the list
-fees	plural of "fe", which is already in the list
+fees	plural of "fee", which is already in the list
 components	plural of "component", which is already in the list
 indian	proper noun
 mary	proper noun
@@ -347,12 +381,15 @@ usb	abbreviation or web jargon
 functions	plural of "function", which is already in the list
 ed	shorter than 3 letters
 brands	plural of "brand", which is already in the list
+places	plural of "place", which is already in the list
 php	abbreviation or web jargon
 trademarks	plural of "trademark", which is already in the list
+phentermine	abbreviation or web jargon
 spain	proper noun
 etc	abbreviation or web jargon
 boston	proper noun
 keywords	plural of "keyword", which is already in the list
+purposes	plural of "purpose", which is already in the list
 sets	plural of "set", which is already in the list
 msn	abbreviation or web jargon
 papers	plural of "paper", which is already in the list
@@ -368,19 +405,26 @@ subjects	plural of "subject", which is already in the list
 agents	plural of "agent", which is already in the list
 songs	plural of "song", which is already in the list
 hands	plural of "hand", which is already in the list
+associates	plural of "associate", which is already in the list
 az	shorter than 3 letters
+updates	plural of "update", which is already in the list
 classes	plural of "class", which is already in the list
 paris	proper noun
 ohio	proper noun
 gets	plural of "get", which is already in the list
+requires	plural of "require", which is already in the list
 jersey	proper noun
 un	shorter than 3 letters
 instruments	plural of "instrument", which is already in the list
+quotes	plural of "quote", which is already in the list
 businesses	plural of "business", which is already in the list
 pst	abbreviation or web jargon
 mi	shorter than 3 letters
+procedures	plural of "procedure", which is already in the list
+eyes	plural of "eye", which is already in the list
 workers	plural of "worker", which is already in the list
 georgia	proper noun
+devices	plural of "device", which is already in the list
 watches	plural of "watch", which is already in the list
 careers	plural of "career", which is already in the list
 goes	plural of "go", which is already in the list
@@ -389,17 +433,22 @@ blogs	abbreviation or web jargon
 hits	plural of "hit", which is already in the list
 th	shorter than 3 letters
 galleries	plural of "gallery", which is already in the list
+references	plural of "reference", which is already in the list
 jack	proper noun
 agencies	plural of "agency", which is already in the list
 spanish	proper noun
 michigan	proper noun
 dr	shorter than 3 letters
 angeles	plural of "angel", which is already in the list
+gives	plural of "give", which is already in the list
 kb	shorter than 3 letters
+magazines	plural of "magazine", which is already in the list
+packages	plural of "package", which is already in the list
 laws	plural of "law", which is already in the list
 individuals	plural of "individual", which is already in the list
 colorado	proper noun
 russian	proper noun
+titles	plural of "title", which is already in the list
 pp	shorter than 3 letters
 vegas	proper noun
 na	shorter than 3 letters
@@ -418,8 +467,11 @@ calls	plural of "call", which is already in the list
 clients	plural of "client", which is already in the list
 actions	plural of "action", which is already in the list
 communities	plural of "community", which is already in the list
+sciences	plural of "science", which is already in the list
 markets	plural of "market", which is already in the list
+lives	plural of "live", which is already in the list
 announcements	plural of "announcement", which is already in the list
+ringtones	plural of "ringtone", which is already in the list
 persons	plural of "person", which is already in the list
 tests	plural of "test", which is already in the list
 accounts	plural of "account", which is already in the list
@@ -427,6 +479,7 @@ ex	shorter than 3 letters
 factors	plural of "factor", which is already in the list
 www	abbreviation or web jargon
 settings	plural of "setting", which is already in the list
+ford	abbreviation or web jargon
 au	shorter than 3 letters
 fi	shorter than 3 letters
 holidays	plural of "holiday", which is already in the list
@@ -434,17 +487,20 @@ replies	plural of "reply", which is already in the list
 nc	shorter than 3 letters
 scott	proper noun
 llc	abbreviation or web jargon
+canon	abbreviation or web jargon
 sections	plural of "section", which is already in the list
 fields	plural of "field", which is already in the list
 po	shorter than 3 letters
 letters	plural of "letter", which is already in the list
 va	shorter than 3 letters
+techniques	plural of "technique", which is already in the list
 ibm	abbreviation or web jargon
 rd	shorter than 3 letters
 johnson	proper noun
 sc	shorter than 3 letters
 dollars	plural of "dollar", which is already in the list
 websites	abbreviation or web jargon
+measures	plural of "measure", which is already in the list
 kansas	proper noun
 israel	proper noun
 se	shorter than 3 letters
@@ -467,7 +523,7 @@ km	shorter than 3 letters
 apartments	plural of "apartment", which is already in the list
 auctions	plural of "auction", which is already in the list
 entries	plural of "entry", which is already in the list
-dates	plural of "dat", which is already in the list
+dates	plural of "date", which is already in the list
 louis	proper noun
 steps	plural of "step", which is already in the list
 errors	plural of "error", which is already in the list
@@ -477,13 +533,19 @@ ga	shorter than 3 letters
 ac	shorter than 3 letters
 thoughts	plural of "thought", which is already in the list
 ft	shorter than 3 letters
+practices	plural of "practice", which is already in the list
 tours	plural of "tour", which is already in the list
+admin	abbreviation or web jargon
+machines	plural of "machine", which is already in the list
 tags	plural of "tag", which is already in the list
 joe	proper noun
 guys	plural of "guy", which is already in the list
+languages	plural of "language", which is already in the list
+vehicles	plural of "vehicle", which is already in the list
 im	shorter than 3 letters
 vs	shorter than 3 letters
 pennsylvania	proper noun
+examples	plural of "example", which is already in the list
 ar	shorter than 3 letters
 claims	plural of "claim", which is already in the list
 strategies	plural of "strategy", which is already in the list
@@ -491,17 +553,21 @@ mo	shorter than 3 letters
 affairs	plural of "affair", which is already in the list
 sa	shorter than 3 letters
 goals	plural of "goal", which is already in the list
+charges	plural of "charge", which is already in the list
+affiliates	plural of "affiliate", which is already in the list
 reasons	plural of "reason", which is already in the list
-ones	plural of "on", which is already in the list
+ones	plural of "one", which is already in the list
 xp	shorter than 3 letters
 oregon	proper noun
 requests	plural of "request", which is already in the list
+tables	plural of "table", which is already in the list
 facts	plural of "fact", which is already in the list
 plants	plural of "plant", which is already in the list
 sitemap	abbreviation or web jargon
 recommendations	plural of "recommendation", which is already in the list
 houston	proper noun
 centers	plural of "center", which is already in the list
+recipes	plural of "recipe", which is already in the list
 follows	plural of "follow", which is already in the list
 eu	shorter than 3 letters
 des	German, not English
@@ -519,9 +585,11 @@ shirts	plural of "shirt", which is already in the list
 leaders	plural of "leader", which is already in the list
 posters	plural of "poster", which is already in the list
 institutions	plural of "institution", which is already in the list
+ave	abbreviation or web jargon
 dj	shorter than 3 letters
+headlines	plural of "headline", which is already in the list
 russia	proper noun
-codes	plural of "cod", which is already in the list
+codes	plural of "code", which is already in the list
 kinds	plural of "kind", which is already in the list
 seattle	proper noun
 statements	plural of "statement", which is already in the list
@@ -558,8 +626,10 @@ rw	shorter than 3 letters
 wants	plural of "want", which is already in the list
 atlanta	proper noun
 credits	plural of "credit", which is already in the list
+pubmed	abbreviation or web jargon
 massachusetts	proper noun
 ne	shorter than 3 letters
+votes	plural of "vote", which is already in the list
 du	shorter than 3 letters
 discussions	plural of "discussion", which is already in the list
 flights	plural of "flight", which is already in the list
@@ -578,10 +648,13 @@ industries	plural of "industry", which is already in the list
 nt	shorter than 3 letters
 es	shorter than 3 letters
 provisions	plural of "provision", which is already in the list
+principles	plural of "principle", which is already in the list
 suggestions	plural of "suggestion", which is already in the list
 sounds	plural of "sound", which is already in the list
+bytes	plural of "byte", which is already in the list
 gb	shorter than 3 letters
 bc	shorter than 3 letters
+offices	plural of "office", which is already in the list
 pr	shorter than 3 letters
 korea	proper noun
 banks	plural of "bank", which is already in the list
@@ -589,32 +662,39 @@ fr	shorter than 3 letters
 participants	plural of "participant", which is already in the list
 aa	shorter than 3 letters
 leads	plural of "lead", which is already in the list
+favorites	plural of "favorite", which is already in the list
 toronto	proper noun
 springs	plural of "spring", which is already in the list
 missouri	proper noun
 andrew	proper noun
 var	abbreviation or web jargon
+estimates	plural of "estimate", which is already in the list
 assets	plural of "asset", which is already in the list
 mt	shorter than 3 letters
 joseph	proper noun
 drivers	plural of "driver", which is already in the list
+figures	plural of "figure", which is already in the list
 officials	plural of "official", which is already in the list
 brian	proper noun
 parameters	plural of "parameter", which is already in the list
 bags	plural of "bag", which is already in the list
+profiles	plural of "profile", which is already in the list
 miami	proper noun
 comics	plural of "comic", which is already in the list
 matters	plural of "matter", which is already in the list
+houses	plural of "house", which is already in the list
 relationships	plural of "relationship", which is already in the list
 tennessee	proper noun
 controls	plural of "control", which is already in the list
 wales	proper noun
 departments	plural of "department", which is already in the list
 residents	plural of "resident", which is already in the list
+samples	plural of "sample", which is already in the list
 daniel	proper noun
 bars	plural of "bar", which is already in the list
 oz	shorter than 3 letters
 helps	plural of "help", which is already in the list
+singles	plural of "single", which is already in the list
 amounts	plural of "amount", which is already in the list
 mg	shorter than 3 letters
 brazil	proper noun
@@ -623,6 +703,8 @@ fans	plural of "fan", which is already in the list
 oklahoma	proper noun
 speakers	plural of "speaker", which is already in the list
 dell	abbreviation or web jargon
+constitutes	plural of "constitute", which is already in the list
+collectibles	plural of "collectible", which is already in the list
 concerns	plural of "concern", which is already in the list
 intel	abbreviation or web jargon
 utilities	plural of "utility", which is already in the list
@@ -640,10 +722,13 @@ aspects	plural of "aspect", which is already in the list
 austria	proper noun
 turkey	proper noun
 libraries	plural of "library", which is already in the list
+degrees	plural of "degree", which is already in the list
 singapore	proper noun
+enterprises	plural of "enterprise", which is already in the list
 inches	plural of "inch", which is already in the list
 phoenix	proper noun
 rs	shorter than 3 letters
+shares	plural of "share", which is already in the list
 colors	plural of "color", which is already in the list
 wars	plural of "war", which is already in the list
 cisco	abbreviation or web jargon
@@ -652,11 +737,17 @@ specials	plural of "special", which is already in the list
 batteries	plural of "battery", which is already in the list
 adobe	abbreviation or web jargon
 bbc	abbreviation or web jargon
+becomes	plural of "become", which is already in the list
+drives	plural of "drive", which is already in the list
 alabama	proper noun
+trees	plural of "tree", which is already in the list
 positions	plural of "position", which is already in the list
 utah	proper noun
 rom	abbreviation or web jargon
+panasonic	abbreviation or web jargon
 miller	proper noun
+babes	plural of "babe", which is already in the list
+frames	plural of "frame", which is already in the list
 src	abbreviation or web jargon
 printers	plural of "printer", which is already in the list
 faqs	abbreviation or web jargon
@@ -665,7 +756,7 @@ eric	proper noun
 taylor	proper noun
 prints	plural of "print", which is already in the list
 americans	plural of "american", which is already in the list
-suites	plural of "suit", which is already in the list
+suites	plural of "suite", which is already in the list
 victoria	proper noun
 broadband	abbreviation or web jargon
 dsl	abbreviation or web jargon
@@ -677,6 +768,7 @@ orlando	proper noun
 maine	proper noun
 sql	abbreviation or web jargon
 specs	plural of "spec", which is already in the list
+pieces	plural of "piece", which is already in the list
 parks	plural of "park", which is already in the list
 lawyers	plural of "lawyer", which is already in the list
 sydney	proper noun
@@ -693,18 +785,26 @@ nm	shorter than 3 letters
 mn	shorter than 3 letters
 nd	shorter than 3 letters
 wilson	proper noun
+irish	proper noun
+certificates	plural of "certificate", which is already in the list
+objectives	plural of "objective", which is already in the list
 stations	plural of "station", which is already in the list
 op	shorter than 3 letters
 remains	plural of "remain", which is already in the list
 firms	plural of "firm", which is already in the list
+euro	proper noun
+structures	plural of "structure", which is already in the list
 charts	plural of "chart", which is already in the list
 tn	shorter than 3 letters
 suppliers	plural of "supplier", which is already in the list
 lights	plural of "light", which is already in the list
 matches	plural of "match", which is already in the list
+engines	plural of "engine", which is already in the list
 stephen	proper noun
 elizabeth	proper noun
 reservations	plural of "reservation", which is already in the list
+greek	proper noun
+differences	plural of "difference", which is already in the list
 gnu	abbreviation or web jargon
 lesbians	plural of "lesbian", which is already in the list
 aol	abbreviation or web jargon
@@ -721,45 +821,61 @@ personals	abbreviation or web jargon
 kevin	proper noun
 jordan	proper noun
 collections	plural of "collection", which is already in the list
-ages	plural of "ag", which is already in the list
+ages	plural of "age", which is already in the list
 dealers	plural of "dealer", which is already in the list
 perl	abbreviation or web jargon
 lib	abbreviation or web jargon
+expenses	plural of "expense", which is already in the list
 ab	shorter than 3 letters
 proceedings	plural of "proceeding", which is already in the list
 anderson	proper noun
 utc	abbreviation or web jargon
 characteristics	plural of "characteristic", which is already in the list
 der	German, not English
+experiences	plural of "experience", which is already in the list
 albums	plural of "album", which is already in the list
 cheats	plural of "cheat", which is already in the list
 verzeichnis	German, not English
 contracts	plural of "contract", which is already in the list
 guests	plural of "guest", which is already in the list
+diseases	plural of "disease", which is already in the list
 developers	plural of "developer", which is already in the list
 tony	proper noun
 nevada	proper noun
 kits	plural of "kit", which is already in the list
 thailand	proper noun
+variables	plural of "variable", which is already in the list
+continues	plural of "continue", which is already in the list
 tracks	plural of "track", which is already in the list
 cam	abbreviation or web jargon
+template	abbreviation or web jargon
 grants	plural of "grant", which is already in the list
+responses	plural of "response", which is already in the list
 atlantic	proper noun
 ram	abbreviation or web jargon
+appliances	plural of "appliance", which is already in the list
 sponsors	plural of "sponsor", which is already in the list
+sizes	plural of "size", which is already in the list
 keys	plural of "key", which is already in the list
+costa	proper noun
 belgium	proper noun
 acts	plural of "act", which is already in the list
 crafts	plural of "craft", which is already in the list
+styles	plural of "style", which is already in the list
 denver	proper noun
 unix	abbreviation or web jargon
 channels	plural of "channel", which is already in the list
+blues	plural of "blue", which is already in the list
+cables	plural of "cable", which is already in the list
+representatives	plural of "representative", which is already in the list
 starts	plural of "start", which is already in the list
+causes	plural of "cause", which is already in the list
 arkansas	proper noun
 attractions	plural of "attraction", which is already in the list
 transactions	plural of "transaction", which is already in the list
 tm	shorter than 3 letters
 britain	proper noun
+scores	plural of "score", which is already in the list
 sp	shorter than 3 letters
 weblog	abbreviation or web jargon
 bears	plural of "bear", which is already in the list
@@ -777,6 +893,7 @@ fm	shorter than 3 letters
 lewis	proper noun
 howard	proper noun
 offline	abbreviation or web jargon
+leaves	plural of "leave", which is already in the list
 connections	plural of "connection", which is already in the list
 checks	plural of "check", which is already in the list
 legs	plural of "leg", which is already in the list
@@ -787,7 +904,9 @@ pdt	abbreviation or web jargon
 montana	proper noun
 switzerland	proper noun
 dimensions	plural of "dimension", which is already in the list
+colleges	plural of "college", which is already in the list
 laptops	plural of "laptop", which is already in the list
+challenges	plural of "challenge", which is already in the list
 editors	plural of "editor", which is already in the list
 mens	plural of "men", which is already in the list
 threads	plural of "thread", which is already in the list
@@ -802,14 +921,17 @@ contributions	plural of "contribution", which is already in the list
 db	shorter than 3 letters
 czech	proper noun
 cambridge	proper noun
+increases	plural of "increase", which is already in the list
 idaho	proper noun
 ph	shorter than 3 letters
 plays	plural of "play", which is already in the list
 ia	shorter than 3 letters
 pt	shorter than 3 letters
+indicates	plural of "indicate", which is already in the list
 oxford	proper noun
 adam	proper noun
 epinions	abbreviation or web jargon
+databases	plural of "database", which is already in the list
 psp	abbreviation or web jargon
 ha	shorter than 3 letters
 ds	shorter than 3 letters
@@ -871,33 +993,47 @@ resorts	plural of "resort", which is already in the list
 baltimore	proper noun
 ky	shorter than 3 letters
 dont	abbreviation or web jargon
+candidates	plural of "candidate", which is already in the list
 charlotte	proper noun
 happens	plural of "happen", which is already in the list
+preferences	plural of "preference", which is already in the list
 bruce	proper noun
-themes	plural of "them", which is already in the list
+themes	plural of "theme", which is already in the list
 powers	plural of "power", which is already in the list
 br	shorter than 3 letters
 bits	plural of "bit", which is already in the list
 egypt	proper noun
+hollywood	proper noun
+wikipedia	abbreviation or web jargon
 norway	proper noun
 vermont	proper noun
 blocks	plural of "block", which is already in the list
 lo	shorter than 3 letters
 ml	shorter than 3 letters
+res	abbreviation or web jargon
 bodies	plural of "body", which is already in the list
 photographs	plural of "photograph", which is already in the list
+simon	proper noun
 writers	plural of "writer", which is already in the list
 marks	plural of "mark", which is already in the list
+favourites	plural of "favourite", which is already in the list
 birds	plural of "bird", which is already in the list
 represents	plural of "represent", which is already in the list
 char	abbreviation or web jargon
+pittsburgh	proper noun
 shots	plural of "shot", which is already in the list
 moore	proper noun
+choices	plural of "choice", which is already in the list
+registry	abbreviation or web jargon
 denmark	proper noun
+header	abbreviation or web jargon
 cs	shorter than 3 letters
+que	abbreviation or web jargon
 sheets	plural of "sheet", which is already in the list
 patrick	proper noun
+puerto	proper noun
 displays	plural of "display", which is already in the list
+voip	abbreviation or web jargon
 delaware	proper noun
 consultants	plural of "consultant", which is already in the list
 risks	plural of "risk", which is already in the list
@@ -907,17 +1043,23 @@ ports	plural of "port", which is already in the list
 sf	shorter than 3 letters
 directories	plural of "directory", which is already in the list
 dreams	plural of "dream", which is already in the list
+blogger	abbreviation or web jargon
 kg	shorter than 3 letters
 stands	plural of "stand", which is already in the list
 textbooks	plural of "textbook", which is already in the list
+cleveland	proper noun
 ut	shorter than 3 letters
 investments	plural of "investment", which is already in the list
+latina	proper noun
 nasa	abbreviation or web jargon
 wheels	plural of "wheel", which is already in the list
+dutch	proper noun
+templates	abbreviation or web jargon
 formats	plural of "format", which is already in the list
 depends	plural of "depend", which is already in the list
 boots	plural of "boot", which is already in the list
 holds	plural of "hold", which is already in the list
+router	abbreviation or web jargon
 si	shorter than 3 letters
 poland	proper noun
 womens	plural of "women", which is already in the list
@@ -926,28 +1068,41 @@ upload	abbreviation or web jargon
 universities	plural of "university", which is already in the list
 contractors	plural of "contractor", which is already in the list
 courts	plural of "court", which is already in the list
+notices	plural of "notice", which is already in the list
 subscriptions	plural of "subscription", which is already in the list
 mc	shorter than 3 letters
+detroit	proper noun
 alexander	proper noun
 toshiba	abbreviation or web jargon
 improvements	plural of "improvement", which is already in the list
+nick	proper noun
+qty	abbreviation or web jargon
 exists	plural of "exist", which is already in the list
 arrangements	plural of "arrangement", which is already in the list
+conferences	plural of "conference", which is already in the list
+uniprotkb	abbreviation or web jargon
+birmingham	proper noun
 lp	shorter than 3 letters
 surveys	plural of "survey", which is already in the list
+committees	plural of "committee", which is already in the list
 researchers	plural of "researcher", which is already in the list
 vietnam	proper noun
+anne	proper noun
 gardens	plural of "garden", which is already in the list
 malaysia	proper noun
 labels	plural of "label", which is already in the list
+bio	abbreviation or web jargon
 heads	plural of "head", which is already in the list
 logos	plural of "logo", which is already in the list
 attorneys	plural of "attorney", which is already in the list
+antiques	plural of "antique", which is already in the list
 ryan	proper noun
 operators	plural of "operator", which is already in the list
 philippines	proper noun
 beds	plural of "bed", which is already in the list
+pcs	abbreviation or web jargon
 employers	plural of "employer", which is already in the list
+honda	proper noun
 bills	plural of "bill", which is already in the list
 definitions	plural of "definition", which is already in the list
 von	German, not English
@@ -959,30 +1114,43 @@ hospitals	plural of "hospital", which is already in the list
 vi	shorter than 3 letters
 monitors	plural of "monitor", which is already in the list
 indonesia	proper noun
+sci	abbreviation or web jargon
 edt	abbreviation or web jargon
 visits	plural of "visit", which is already in the list
 domains	plural of "domain", which is already in the list
 capabilities	plural of "capability", which is already in the list
+pmid	abbreviation or web jargon
 berlin	proper noun
 ba	shorter than 3 letters
+para	abbreviation or web jargon
+siemens	proper noun
 cr	shorter than 3 letters
 pounds	plural of "pound", which is already in the list
 organisations	plural of "organisation", which is already in the list
 pg	shorter than 3 letters
+programmes	plural of "programme", which is already in the list
 ee	shorter than 3 letters
 meets	plural of "meet", which is already in the list
+medline	abbreviation or web jargon
 agreements	plural of "agreement", which is already in the list
+marshall	proper noun
 tampa	proper noun
 grace	proper noun
 susan	proper noun
+ing	abbreviation or web jargon
 ks	shorter than 3 letters
 adams	proper noun
 python	abbreviation or web jargon
+alex	proper noun
 columns	plural of "column", which is already in the list
 disorders	plural of "disorder", which is already in the list
 bugs	plural of "bug", which is already in the list
+hamilton	proper noun
 ftp	abbreviation or web jargon
+cookies	plural of "cookie", which is already in the list
+med	abbreviation or web jargon
 engineers	plural of "engineer", which is already in the list
+cruises	plural of "cruise", which is already in the list
 proposals	plural of "proposal", which is already in the list
 sw	shorter than 3 letters
 tutorials	plural of "tutorial", which is already in the list
@@ -994,11 +1162,17 @@ brings	plural of "bring", which is already in the list
 hd	shorter than 3 letters
 governments	plural of "government", which is already in the list
 scripts	plural of "script", which is already in the list
+abc	abbreviation or web jargon
+airlines	plural of "airline", which is already in the list
+livecam	abbreviation or web jargon
+jay	proper noun
 trips	plural of "trip", which is already in the list
+sides	plural of "side", which is already in the list
 turns	plural of "turn", which is already in the list
 descriptions	plural of "description", which is already in the list
 oracle	abbreviation or web jargon
 er	shorter than 3 letters
+matthew	proper noun
 productions	plural of "production", which is already in the list
 hobbies	plural of "hobby", which is already in the list
 commands	plural of "command", which is already in the list
@@ -1006,7 +1180,11 @@ jr	shorter than 3 letters
 injuries	plural of "injury", which is already in the list
 seats	plural of "seat", which is already in the list
 approaches	plural of "approach", which is already in the list
+biz	abbreviation or web jargon
+anthony	proper noun
+nintendo	proper noun
 stamps	plural of "stamp", which is already in the list
+franklin	proper noun
 highlights	plural of "highlight", which is already in the list
 designers	plural of "designer", which is already in the list
 melbourne	proper noun
@@ -1014,99 +1192,162 @@ scientists	plural of "scientist", which is already in the list
 wyoming	proper noun
 argentina	proper noun
 thongs	plural of "thong", which is already in the list
+gcc	abbreviation or web jargon
 volunteers	plural of "volunteer", which is already in the list
 finland	proper noun
+morgan	proper noun
 asp	abbreviation or web jargon
 desktops	plural of "desktop", which is already in the list
+columbus	proper noun
 workshops	plural of "workshop", which is already in the list
+mortgages	plural of "mortgage", which is already in the list
 responsibilities	plural of "responsibility", which is already in the list
 investors	plural of "investor", which is already in the list
 picks	plural of "pick", which is already in the list
 vacations	plural of "vacation", which is already in the list
+fetish	abbreviation or web jargon
 applies	plural of "apply", which is already in the list
 casinos	plural of "casino", which is already in the list
+apache	proper noun
 filters	plural of "filter", which is already in the list
 nv	shorter than 3 letters
 notebooks	plural of "notebook", which is already in the list
+semi	abbreviation or web jargon
 coins	plural of "coin", which is already in the list
+andy	proper noun
+valentine	proper noun
+hilton	proper noun
+ken	proper noun
 proteins	plural of "protein", which is already in the list
 su	shorter than 3 letters
+exp	abbreviation or web jargon
+douglas	proper noun
+debian	proper noun
+christopher	proper noun
+epson	proper noun
+madison	proper noun
 editions	plural of "edition", which is already in the list
 cpu	abbreviation or web jargon
 finds	plural of "find", which is already in the list
 situations	plural of "situation", which is already in the list
 corrections	plural of "correction", which is already in the list
+describes	plural of "describe", which is already in the list
 sr	shorter than 3 letters
 occurs	plural of "occur", which is already in the list
+jon	proper noun
 disabilities	plural of "disability", which is already in the list
 consists	plural of "consist", which is already in the list
-lies	plural of "li", which is already in the list
+anytime	abbreviation or web jargon
+lies	plural of "lie", which is already in the list
 soldiers	plural of "soldier", which is already in the list
 nr	shorter than 3 letters
+initiatives	plural of "initiative", which is already in the list
 classics	plural of "classic", which is already in the list
+lbs	abbreviation or web jargon
+horses	plural of "horse", which is already in the list
+lol	abbreviation or web jargon
 wayne	proper noun
 mp	shorter than 3 letters
+substances	plural of "substance", which is already in the list
 wings	plural of "wing", which is already in the list
 breaks	plural of "break", which is already in the list
 restrictions	plural of "restriction", which is already in the list
 waters	plural of "water", which is already in the list
+modem	abbreviation or web jargon
 harris	proper noun
+mph	abbreviation or web jargon
+tiffany	proper noun
+toyota	proper noun
 streets	plural of "street", which is already in the list
 larry	proper noun
 developments	plural of "development", which is already in the list
+def	abbreviation or web jargon
 destinations	plural of "destination", which is already in the list
 lets	abbreviation or web jargon
 li	shorter than 3 letters
 chairs	plural of "chair", which is already in the list
 nl	shorter than 3 letters
 mountains	plural of "mountain", which is already in the list
+moves	plural of "move", which is already in the list
+ethernet	abbreviation or web jargon
+sierra	proper noun
 cats	plural of "cat", which is already in the list
+postposted	abbreviation or web jargon
 ya	shorter than 3 letters
+rhode	proper noun
 nba	abbreviation or web jargon
 steven	proper noun
+greg	proper noun
 victims	plural of "victim", which is already in the list
+epa	abbreviation or web jargon
+spaces	plural of "space", which is already in the list
 coupons	plural of "coupon", which is already in the list
 tr	shorter than 3 letters
+cialis	abbreviation or web jargon
 bb	shorter than 3 letters
 boats	plural of "boat", which is already in the list
+scottish	proper noun
+richmond	proper noun
 sacramento	proper noun
+ron	proper noun
 russell	proper noun
 tells	plural of "tell", which is already in the list
 bedrooms	plural of "bedroom", which is already in the list
 talks	plural of "talk", which is already in the list
+testimonials	abbreviation or web jargon
 trials	plural of "trial", which is already in the list
 nz	shorter than 3 letters
+clinton	proper noun
 masters	plural of "master", which is already in the list
 bonds	plural of "bond", which is already in the list
 alberta	proper noun
+org	abbreviation or web jargon
 commons	plural of "common", which is already in the list
+cincinnati	proper noun
 roger	proper noun
+mexican	proper noun
 counts	plural of "count", which is already in the list
 wallpapers	plural of "wallpaper", which is already in the list
+hist	abbreviation or web jargon
+inter	abbreviation or web jargon
+assumes	plural of "assume", which is already in the list
 heights	plural of "height", which is already in the list
 firefox	abbreviation or web jargon
 lisa	proper noun
+korean	proper noun
 studios	plural of "studio", which is already in the list
 buttons	plural of "button", which is already in the list
 observations	plural of "observation", which is already in the list
+vbulletin	abbreviation or web jargon
+thompson	proper noun
 winners	plural of "winner", which is already in the list
 roads	plural of "road", which is already in the list
 dublin	proper noun
 memories	plural of "memory", which is already in the list
 nelson	proper noun
 te	shorter than 3 letters
+creates	plural of "create", which is already in the list
+faces	plural of "face", which is already in the list
 av	shorter than 3 letters
 sean	proper noun
 presentations	plural of "presentation", which is already in the list
-grades	plural of "grad", which is already in the list
+grades	plural of "grade", which is already in the list
 cartoons	plural of "cartoon", which is already in the list
+tion	abbreviation or web jargon
+wiki	abbreviation or web jargon
 losses	plural of "loss", which is already in the list
+lakes	plural of "lake", which is already in the list
 donations	plural of "donation", which is already in the list
 associations	plural of "association", which is already in the list
+citysearch	abbreviation or web jargon
 kings	plural of "king", which is already in the list
+kent	proper noun
 adds	plural of "add", which is already in the list
+nsw	abbreviation or web jargon
 flags	plural of "flag", which is already in the list
+pci	abbreviation or web jargon
 baker	proper noun
+guestbook	abbreviation or web jargon
 walls	plural of "wall", which is already in the list
 arthur	proper noun
 ian	proper noun
@@ -1114,87 +1355,138 @@ walker	proper noun
 suggests	plural of "suggest", which is already in the list
 ra	shorter than 3 letters
 targets	plural of "target", which is already in the list
+purchases	plural of "purchase", which is already in the list
 yards	plural of "yard", which is already in the list
 chemicals	plural of "chemical", which is already in the list
+gordon	proper noun
+mod	abbreviation or web jargon
 farmers	plural of "farmer", which is already in the list
 rc	shorter than 3 letters
 queries	plural of "query", which is already in the list
+bmw	abbreviation or web jargon
 ukraine	proper noun
 vendors	plural of "vendor", which is already in the list
 mpeg	abbreviation or web jargon
+serves	plural of "serve", which is already in the list
 woods	plural of "wood", which is already in the list
+rico	proper noun
 shoppers	plural of "shopper", which is already in the list
+phil	proper noun
+couples	plural of "couple", which is already in the list
 nashville	proper noun
+jokes	plural of "joke", which is already in the list
 cst	abbreviation or web jargon
 http	abbreviation or web jargon
+ceo	abbreviation or web jargon
+simpson	proper noun
+twiki	abbreviation or web jargon
 wins	plural of "win", which is already in the list
 measurements	plural of "measurement", which is already in the list
+milwaukee	proper noun
 shareware	abbreviation or web jargon
 ec	shorter than 3 letters
+rep	abbreviation or web jargon
+dicke	proper noun
+kerry	proper noun
 mit	German, not English
 keith	proper noun
 linda	proper noun
+ross	proper noun
 chile	proper noun
 anna	proper noun
 maria	proper noun
 rm	shorter than 3 letters
+attributes	plural of "attribute", which is already in the list
+writes	plural of "write", which is already in the list
 pdas	plural of "pda", which is already in the list
+outcomes	plural of "outcome", which is already in the list
+sri	proper noun
 thumbnail	abbreviation or web jargon
+trans	abbreviation or web jargon
 jonathan	proper noun
 api	abbreviation or web jargon
+plates	plural of "plate", which is already in the list
+acres	plural of "acre", which is already in the list
 essays	plural of "essay", which is already in the list
+config	abbreviation or web jargon
 cf	shorter than 3 letters
 edinburgh	proper noun
 vt	shorter than 3 letters
-modes	plural of "mod", which is already in the list
+modes	plural of "mode", which is already in the list
 campbell	proper noun
 hungary	proper noun
+urw	abbreviation or web jargon
 lan	abbreviation or web jargon
 wells	plural of "well", which is already in the list
+wishlist	abbreviation or web jargon
 opens	plural of "open", which is already in the list
+sms	abbreviation or web jargon
 secrets	plural of "secret", which is already in the list
 merchants	plural of "merchant", which is already in the list
 trailers	plural of "trailer", which is already in the list
 philips	plural of "philip", which is already in the list
+enables	plural of "enable", which is already in the list
+nec	abbreviation or web jargon
+iraqi	proper noun
+vista	abbreviation or web jargon
 jessica	proper noun
 chips	plural of "chip", which is already in the list
 terry	proper noun
+foto	abbreviation or web jargon
 arguments	plural of "argument", which is already in the list
+amsterdam	proper noun
+adventures	plural of "adventure", which is already in the list
 stewart	proper noun
 tabs	plural of "tab", which is already in the list
+polish	proper noun
 extras	plural of "extra", which is already in the list
 gm	shorter than 3 letters
+centres	plural of "centre", which is already in the list
 jerry	proper noun
 lands	plural of "land", which is already in the list
 ri	shorter than 3 letters
 bulgaria	proper noun
 rt	shorter than 3 letters
+rick	proper noun
 trucks	plural of "truck", which is already in the list
 cp	shorter than 3 letters
 mechanisms	plural of "mechanism", which is already in the list
 laura	proper noun
 tokyo	proper noun
+nikon	abbreviation or web jargon
 pills	plural of "pill", which is already in the list
+donald	proper noun
 folks	plural of "folk", which is already in the list
+telecom	abbreviation or web jargon
 angels	plural of "angel", which is already in the list
 indicators	plural of "indicator", which is already in the list
+thai	proper noun
 emissions	plural of "emission", which is already in the list
 physicians	plural of "physician", which is already in the list
+fred	proper noun
+scenes	plural of "scene", which is already in the list
 experiments	plural of "experiment", which is already in the list
+afghanistan	proper noun
 dd	shorter than 3 letters
+spanking	abbreviation or web jargon
 supplements	plural of "supplement", which is already in the list
 icons	plural of "icon", which is already in the list
+aud	abbreviation or web jargon
 keeps	plural of "keep", which is already in the list
 pl	shorter than 3 letters
+roses	plural of "rose", which is already in the list
 labs	plural of "lab", which is already in the list
 motors	plural of "motor", which is already in the list
 roberts	proper noun
+crm	abbreviation or web jargon
 rf	shorter than 3 letters
 billy	proper noun
+revenues	plural of "revenue", which is already in the list
 ak	shorter than 3 letters
 fe	shorter than 3 letters
 craig	proper noun
 churches	plural of "church", which is already in the list
+reserves	plural of "reserve", which is already in the list
 td	shorter than 3 letters
 sb	shorter than 3 letters
 ah	shorter than 3 letters
@@ -1203,24 +1495,36 @@ complaints	plural of "complaint", which is already in the list
 sm	shorter than 3 letters
 nancy	proper noun
 promotions	plural of "promotion", which is already in the list
-tones	plural of "ton", which is already in the list
+tones	plural of "tone", which is already in the list
 patches	plural of "patch", which is already in the list
+usc	abbreviation or web jargon
 towns	plural of "town", which is already in the list
 environments	plural of "environment", which is already in the list
+trembl	abbreviation or web jargon
+blvd	abbreviation or web jargon
+amd	abbreviation or web jargon
 emails	plural of "email", which is already in the list
+cyprus	proper noun
 wv	shorter than 3 letters
 seminars	plural of "seminar", which is already in the list
+consequences	plural of "consequence", which is already in the list
 makers	plural of "maker", which is already in the list
 hearts	plural of "heart", which is already in the list
 ns	shorter than 3 letters
 carter	proper noun
+marc	proper noun
 reads	plural of "read", which is already in the list
+roles	plural of "role", which is already in the list
 sons	plural of "son", which is already in the list
 platforms	plural of "platform", which is already in the list
 ja	shorter than 3 letters
 bs	shorter than 3 letters
+saudi	proper noun
 cuba	proper noun
+hrs	abbreviation or web jargon
 districts	plural of "district", which is already in the list
+kate	proper noun
+chevrolet	abbreviation or web jargon
 babies	plural of "baby", which is already in the list
 bi	shorter than 3 letters
 karen	proper noun
@@ -1228,6 +1532,9 @@ specialists	plural of "specialist", which is already in the list
 albert	proper noun
 bristol	proper noun
 margaret	proper noun
+compaq	abbreviation or web jargon
+showtimes	abbreviation or web jargon
+cal	abbreviation or web jargon
 portions	plural of "portion", which is already in the list
 sectors	plural of "sector", which is already in the list
 samuel	proper noun
@@ -1238,99 +1545,153 @@ baskets	plural of "basket", which is already in the list
 wright	proper noun
 img	abbreviation or web jargon
 barry	proper noun
+schedules	plural of "schedule", which is already in the list
 admissions	plural of "admission", which is already in the list
+cached	abbreviation or web jargon
+warren	proper noun
+involves	plural of "involve", which is already in the list
+rpm	abbreviation or web jargon
 profits	plural of "profit", which is already in the list
 marie	proper noun
+deutsch	German, not English
 limitations	plural of "limitation", which is already in the list
 kenya	proper noun
 cuts	plural of "cut", which is already in the list
+nutten	German, not English
 chapters	plural of "chapter", which is already in the list
+pee	abbreviation or web jargon
+charlie	proper noun
 quebec	proper noun
 dennis	proper noun
 mars	plural of "mar", which is already in the list
+francis	proper noun
+tvs	abbreviation or web jargon
 signals	plural of "signal", which is already in the list
 caps	plural of "cap", which is already in the list
 symbols	plural of "symbol", which is already in the list
 humans	plural of "human", which is already in the list
+packard	abbreviation or web jargon
 philip	proper noun
 gi	shorter than 3 letters
 holders	plural of "holder", which is already in the list
+believes	plural of "believe", which is already in the list
+swedish	proper noun
 poems	plural of "poem", which is already in the list
 collins	proper noun
+stages	plural of "stage", which is already in the list
+sur	abbreviation or web jargon
 winds	plural of "wind", which is already in the list
+broadway	proper noun
+cartridges	plural of "cartridge", which is already in the list
+stones	plural of "stone", which is already in the list
 roots	plural of "root", which is already in the list
 attempts	plural of "attempt", which is already in the list
 glasgow	proper noun
 impacts	plural of "impact", which is already in the list
+rev	abbreviation or web jargon
+advantages	plural of "advantage", which is already in the list
+loves	plural of "love", which is already in the list
 ll	shorter than 3 letters
 aims	plural of "aim", which is already in the list
 extensions	plural of "extension", which is already in the list
 appeals	plural of "appeal", which is already in the list
 cl	shorter than 3 letters
+islamic	proper noun
 ieee	abbreviation or web jargon
 ho	shorter than 3 letters
+alternatives	plural of "alternative", which is already in the list
 parker	proper noun
+lebanon	proper noun
 corp	abbreviation or web jargon
+kennedy	proper noun
 gt	shorter than 3 letters
 sh	shorter than 3 letters
 ae	shorter than 3 letters
+cooper	proper noun
+nyc	abbreviation or web jargon
 vincent	proper noun
 partnerships	plural of "partnership", which is already in the list
 slots	plural of "slot", which is already in the list
 rocks	plural of "rock", which is already in the list
+titans	abbreviation or web jargon
 applicants	plural of "applicant", which is already in the list
-genes	plural of "gen", which is already in the list
+genes	plural of "gene", which is already in the list
 firewall	abbreviation or web jargon
 guns	plural of "gun", which is already in the list
+herein	abbreviation or web jargon
+rio	proper noun
 hs	shorter than 3 letters
 treatments	plural of "treatment", which is already in the list
 camcorders	plural of "camcorder", which is already in the list
 basics	plural of "basic", which is already in the list
 montreal	proper noun
 rv	shorter than 3 letters
+struct	abbreviation or web jargon
 lenses	plural of "lens", which is already in the list
 genetics	plural of "genetic", which is already in the list
 pi	shorter than 3 letters
+walter	proper noun
 ai	shorter than 3 letters
 producers	plural of "producer", which is already in the list
 ot	shorter than 3 letters
 hosts	plural of "host", which is already in the list
+interfaces	plural of "interface", which is already in the list
 advertisers	plural of "advertiser", which is already in the list
 moments	plural of "moment", which is already in the list
 strings	plural of "string", which is already in the list
 feels	plural of "feel", which is already in the list
 carl	proper noun
 mitchell	proper noun
+mrs	abbreviation or web jargon
+rica	proper noun
 ralph	proper noun
 yr	shorter than 3 letters
+warner	abbreviation or web jargon
+inkjet	abbreviation or web jargon
 corps	plural of "corp", which is already in the list
 actors	plural of "actor", which is already in the list
 peripherals	plural of "peripheral", which is already in the list
 morris	proper noun
+eminem	proper noun
+minneapolis	proper noun
 memphis	proper noun
 texts	plural of "text", which is already in the list
+harvard	proper noun
 brokers	plural of "broker", which is already in the list
 roy	proper noun
 ottawa	proper noun
 ic	shorter than 3 letters
+podcast	abbreviation or web jargon
 seasons	plural of "season", which is already in the list
 peru	proper noun
 interactions	plural of "interaction", which is already in the list
 evans	proper noun
 fails	plural of "fail", which is already in the list
+nike	proper noun
 plugin	abbreviation or web jargon
 alice	proper noun
 latinas	plural of "latina", which is already in the list
+dealtime	abbreviation or web jargon
+temp	abbreviation or web jargon
+intro	abbreviation or web jargon
+mercedes	proper noun
+zus	German, not English
 mills	plural of "mill", which is already in the list
 amendments	plural of "amendment", which is already in the list
+tramadol	abbreviation or web jargon
 holland	proper noun
+receives	plural of "receive", which is already in the list
 fonts	plural of "font", which is already in the list
+ent	abbreviation or web jargon
 refers	plural of "refer", which is already in the list
 veterans	plural of "veteran", which is already in the list
 mx	shorter than 3 letters
 gr	shorter than 3 letters
+xhtml	abbreviation or web jargon
 recordings	plural of "recording", which is already in the list
+jefferson	proper noun
 demands	plural of "demand", which is already in the list
+ext	abbreviation or web jargon
 obligations	plural of "obligation", which is already in the list
 tops	plural of "top", which is already in the list
 michelle	proper noun
@@ -1343,70 +1704,124 @@ packs	plural of "pack", which is already in the list
 ge	shorter than 3 letters
 switches	plural of "switch", which is already in the list
 romania	proper noun
+ncaa	abbreviation or web jargon
+phd	abbreviation or web jargon
+blogging	abbreviation or web jargon
 ng	shorter than 3 letters
 pe	shorter than 3 letters
+turkish	proper noun
+pentium	abbreviation or web jargon
+murray	proper noun
 tt	shorter than 3 letters
 additions	plural of "addition", which is already in the list
+aka	abbreviation or web jargon
+holes	plural of "hole", which is already in the list
 weddings	plural of "wedding", which is already in the list
 meals	plural of "meal", which is already in the list
+goto	abbreviation or web jargon
 meters	plural of "meter", which is already in the list
 calendars	plural of "calendar", which is already in the list
 conclusions	plural of "conclusion", which is already in the list
 passes	plural of "pass", which is already in the list
+durham	proper noun
 permits	plural of "permit", which is already in the list
 muslim	proper noun
 xl	shorter than 3 letters
+neil	proper noun
 netscape	abbreviation or web jargon
 rankings	plural of "ranking", which is already in the list
+cad	abbreviation or web jargon
 hats	plural of "hat", which is already in the list
+robinson	proper noun
+jacksonville	proper noun
 sharon	proper noun
+tcp	abbreviation or web jargon
 transfers	plural of "transfer", which is already in the list
+olympic	proper noun
 attachments	plural of "attachment", which is already in the list
 dv	shorter than 3 letters
+dir	abbreviation or web jargon
 entities	plural of "entity", which is already in the list
 administrators	plural of "administrator", which is already in the list
+israeli	proper noun
+medicare	abbreviation or web jargon
+val	abbreviation or web jargon
+hewlett	abbreviation or web jargon
 explains	plural of "explain", which is already in the list
+flickr	abbreviation or web jargon
 feelings	plural of "feeling", which is already in the list
 jamaica	proper noun
 priorities	plural of "priority", which is already in the list
 fotos	plural of "foto", which is already in the list
+britney	proper noun
 freeware	abbreviation or web jargon
 deaths	plural of "death", which is already in the list
 rivers	plural of "river", which is already in the list
 manhattan	proper noun
+tales	plural of "tale", which is already in the list
+katrina	proper noun
 islam	proper noun
+nodes	plural of "node", which is already in the list
 tu	shorter than 3 letters
 fy	shorter than 3 letters
 thumbs	plural of "thumb", which is already in the list
 seeds	plural of "seed", which is already in the list
+lite	abbreviation or web jargon
+ghz	abbreviation or web jargon
+skype	abbreviation or web jargon
+gamecube	abbreviation or web jargon
 rr	shorter than 3 letters
+portuguese	proper noun
+titten	German, not English
+eng	abbreviation or web jargon
 ef	shorter than 3 letters
 drinks	plural of "drink", which is already in the list
+voices	plural of "voice", which is already in the list
+halloween	proper noun
 tons	plural of "ton", which is already in the list
 carol	proper noun
+albany	proper noun
 ep	shorter than 3 letters
+housewares	abbreviation or web jargon
 democrats	plural of "democrat", which is already in the list
+gbp	abbreviation or web jargon
 qualifications	plural of "qualification", which is already in the list
 museums	plural of "museum", which is already in the list
+slideshow	abbreviation or web jargon
 lb	shorter than 3 letters
+pierre	proper noun
+jelsoft	abbreviation or web jargon
+oakland	proper noun
 colombia	proper noun
-waves	plural of "wav", which is already in the list
+waves	plural of "wave", which is already in the list
 lamps	plural of "lamp", which is already in the list
+photoshop	abbreviation or web jargon
 jp	shorter than 3 letters
+chi	abbreviation or web jargon
 bt	shorter than 3 letters
+arabia	proper noun
 panama	proper noun
+indianapolis	proper noun
 af	shorter than 3 letters
 corporations	plural of "corporation", which is already in the list
+rfc	abbreviation or web jargon
 accommodations	plural of "accommodation", which is already in the list
 athens	proper noun
+judges	plural of "judge", which is already in the list
 sl	shorter than 3 letters
+seo	abbreviation or web jargon
 isp	abbreviation or web jargon
 remarks	plural of "remark", which is already in the list
+decades	plural of "decade", which is already in the list
 paintings	plural of "painting", which is already in the list
+nissan	proper noun
+ins	abbreviation or web jargon
 eggs	plural of "egg", which is already in the list
+yorkshire	proper noun
 populations	plural of "population", which is already in the list
 hb	shorter than 3 letters
 jpg	abbreviation or web jargon
+norton	proper noun
 tc	shorter than 3 letters
 ruby	abbreviation or web jargon
 screens	plural of "screen", which is already in the list
@@ -1414,61 +1829,107 @@ croatia	proper noun
 flows	plural of "flow", which is already in the list
 venezuela	proper noun
 mins	plural of "min", which is already in the list
+sequences	plural of "sequence", which is already in the list
+nurses	plural of "nurse", which is already in the list
 ssl	abbreviation or web jargon
+lanka	proper noun
 edwards	proper noun
 contests	plural of "contest", which is already in the list
+announces	plural of "announce", which is already in the list
 mlb	abbreviation or web jargon
+berkeley	proper noun
+bikes	plural of "bike", which is already in the list
+gates	plural of "gate", which is already in the list
 gp	shorter than 3 letters
 counters	plural of "counter", which is already in the list
 puts	plural of "put", which is already in the list
+cultures	plural of "culture", which is already in the list
+norfolk	proper noun
 submissions	plural of "submission", which is already in the list
+oem	abbreviation or web jargon
 heroes	plural of "hero", which is already in the list
+lycos	abbreviation or web jargon
 ir	shorter than 3 letters
+zdnet	abbreviation or web jargon
 carriers	plural of "carrier", which is already in the list
 ecommerce	abbreviation or web jargon
 builders	plural of "builder", which is already in the list
-ties	plural of "ti", which is already in the list
+ties	plural of "tie", which is already in the list
+schemes	plural of "scheme", which is already in the list
+fisher	proper noun
+brad	proper noun
+combo	abbreviation or web jargon
 seniors	plural of "senior", which is already in the list
 worlds	plural of "world", which is already in the list
+dos	abbreviation or web jargon
 subscribers	plural of "subscriber", which is already in the list
+mitsubishi	proper noun
 constraints	plural of "constraint", which is already in the list
+crimes	plural of "crime", which is already in the list
+mozilla	abbreviation or web jargon
 branches	plural of "branch", which is already in the list
+oclc	abbreviation or web jargon
+delhi	proper noun
 holdings	plural of "holding", which is already in the list
 processors	plural of "processor", which is already in the list
+plc	abbreviation or web jargon
+nepal	proper noun
+zimbabwe	proper noun
 difficulties	plural of "difficulty", which is already in the list
+juan	proper noun
+msg	abbreviation or web jargon
 barcelona	proper noun
 territories	plural of "territory", which is already in the list
 melissa	proper noun
 moscow	proper noun
+palestinian	proper noun
 discs	plural of "disc", which is already in the list
 bargains	plural of "bargain", which is already in the list
 nigeria	proper noun
-pixels	plural of "pixel", which is already in the list
+pixels	abbreviation or web jargon
+hispanic	proper noun
 cv	shorter than 3 letters
 cb	shorter than 3 letters
+gen	abbreviation or web jargon
 diamonds	plural of "diamond", which is already in the list
+espn	abbreviation or web jargon
 totals	plural of "total", which is already in the list
+marriott	abbreviation or web jargon
+exercises	plural of "exercise", which is already in the list
 nhl	abbreviation or web jargon
 protocols	plural of "protocol", which is already in the list
 turner	proper noun
+sucking	abbreviation or web jargon
 cents	plural of "cent", which is already in the list
+reuters	proper noun
 ti	shorter than 3 letters
 fc	shorter than 3 letters
+todd	proper noun
 assignments	plural of "assignment", which is already in the list
 fw	shorter than 3 letters
 manuals	plural of "manual", which is already in the list
-sees	plural of "se", which is already in the list
+doug	proper noun
+sees	plural of "see", which is already in the list
 households	plural of "household", which is already in the list
 gs	shorter than 3 letters
 rogers	plural of "roger", which is already in the list
+aaa	abbreviation or web jargon
 wishes	plural of "wish", which is already in the list
+montgomery	proper noun
+louisville	proper noun
+macintosh	abbreviation or web jargon
 movements	plural of "movement", which is already in the list
+monica	proper noun
 repairs	plural of "repair", which is already in the list
+lynn	proper noun
 bp	shorter than 3 letters
+std	abbreviation or web jargon
 seeks	plural of "seek", which is already in the list
 docs	plural of "doc", which is already in the list
+stanley	proper noun
 vitamins	plural of "vitamin", which is already in the list
 gains	plural of "gain", which is already in the list
+vid	abbreviation or web jargon
 brooklyn	proper noun
 liverpool	proper noun
 sisters	plural of "sister", which is already in the list
@@ -1477,53 +1938,95 @@ oo	shorter than 3 letters
 algorithms	plural of "algorithm", which is already in the list
 madrid	proper noun
 norman	proper noun
+fda	abbreviation or web jargon
+madonna	proper noun
 ni	shorter than 3 letters
+murphy	proper noun
 thinks	plural of "think", which is already in the list
 thats	abbreviation or web jargon
+hdtv	abbreviation or web jargon
 phillips	proper noun
+asin	abbreviation or web jargon
 justin	proper noun
 mirrors	plural of "mirror", which is already in the list
 tricks	plural of "trick", which is already in the list
+expansys	abbreviation or web jargon
 panels	plural of "panel", which is already in the list
+kodak	abbreviation or web jargon
+danish	proper noun
+filename	abbreviation or web jargon
 florence	proper noun
 um	shorter than 3 letters
 drawings	plural of "drawing", which is already in the list
 ye	shorter than 3 letters
 fs	shorter than 3 letters
 lovers	plural of "lover", which is already in the list
+approx	abbreviation or web jargon
+arabic	proper noun
 essentials	plural of "essential", which is already in the list
 nn	shorter than 3 letters
 rachel	proper noun
 weekends	plural of "weekend", which is already in the list
 screenshots	plural of "screenshot", which is already in the list
+produces	plural of "produce", which is already in the list
+ted	proper noun
 chains	plural of "chain", which is already in the list
+kingston	proper noun
 adapters	plural of "adapter", which is already in the list
 farms	plural of "farm", which is already in the list
 imports	plural of "import", which is already in the list
+expenditures	plural of "expenditure", which is already in the list
 celebrities	plural of "celebrity", which is already in the list
 boundaries	plural of "boundary", which is already in the list
+kde	abbreviation or web jargon
 threats	plural of "threat", which is already in the list
+luxembourg	proper noun
+puzzles	plural of "puzzle", which is already in the list
 vb	shorter than 3 letters
 cams	plural of "cam", which is already in the list
+joel	proper noun
 autos	plural of "auto", which is already in the list
 yo	shorter than 3 letters
+perry	proper noun
 benjamin	proper noun
+colleagues	plural of "colleague", which is already in the list
+lotus	abbreviation or web jargon
+olympus	abbreviation or web jargon
+proc	abbreviation or web jargon
 fx	shorter than 3 letters
+salem	proper noun
 dl	shorter than 3 letters
-tapes	plural of "tap", which is already in the list
+upgrades	plural of "upgrade", which is already in the list
+likes	plural of "like", which is already in the list
+tapes	plural of "tape", which is already in the list
+zones	plural of "zone", which is already in the list
+races	plural of "race", which is already in the list
+luke	proper noun
 retailers	plural of "retailer", which is already in the list
 kenneth	proper noun
+harrison	proper noun
 ls	shorter than 3 letters
 julie	proper noun
+cbs	abbreviation or web jargon
+pete	proper noun
+spec	abbreviation or web jargon
+realty	abbreviation or web jargon
 janet	proper noun
+penn	proper noun
+phpbb	abbreviation or web jargon
+midi	abbreviation or web jargon
 permissions	plural of "permission", which is already in the list
 jackets	plural of "jacket", which is already in the list
+routes	plural of "route", which is already in the list
 helen	proper noun
+lopez	proper noun
 catherine	proper noun
 villas	plural of "villa", which is already in the list
+peeing	abbreviation or web jargon
 occasions	plural of "occasion", which is already in the list
 brooks	plural of "brook", which is already in the list
 equations	plural of "equation", which is already in the list
+newton	proper noun
 oils	plural of "oil", which is already in the list
 sept	abbreviation or web jargon
 respondents	plural of "respondent", which is already in the list
@@ -1531,114 +2034,228 @@ lt	shorter than 3 letters
 minds	plural of "mind", which is already in the list
 considerations	plural of "consideration", which is already in the list
 scanners	plural of "scanner", which is already in the list
+atm	abbreviation or web jargon
+xanax	abbreviation or web jargon
 eq	shorter than 3 letters
 pays	plural of "pay", which is already in the list
 fingers	plural of "finger", which is already in the list
 ebooks	plural of "ebook", which is already in the list
 delivers	plural of "deliver", which is already in the list
 je	shorter than 3 letters
+queensland	proper noun
 musicians	plural of "musician", which is already in the list
 leeds	proper noun
+lang	abbreviation or web jargon
 theaters	plural of "theater", which is already in the list
+raleigh	proper noun
 uv	shorter than 3 letters
-hopes	plural of "hop", which is already in the list
+blair	proper noun
+hopes	plural of "hope", which is already in the list
 assessments	plural of "assessment", which is already in the list
+cms	abbreviation or web jargon
 mason	proper noun
 burns	plural of "burn", which is already in the list
 pumps	plural of "pump", which is already in the list
 sg	shorter than 3 letters
+vic	abbreviation or web jargon
 beijing	proper noun
+peoples	plural of "people", which is already in the list
+victor	proper noun
+mario	proper noun
+pos	abbreviation or web jargon
+licenses	plural of "license", which is already in the list
+utils	abbreviation or web jargon
+brunswick	proper noun
+phys	abbreviation or web jargon
+ranges	plural of "range", which is already in the list
 pairs	plural of "pair", which is already in the list
 trails	plural of "trail", which is already in the list
+hudson	proper noun
 calgary	proper noun
+dialog	abbreviation or web jargon
+venues	plural of "venue", which is already in the list
+newport	proper noun
 indians	plural of "indian", which is already in the list
 prague	proper noun
 previews	plural of "preview", which is already in the list
+bangladesh	proper noun
 mothers	plural of "mother", which is already in the list
+nascar	abbreviation or web jargon
+iceland	proper noun
+candles	plural of "candle", which is already in the list
 variations	plural of "variation", which is already in the list
 moms	plural of "mom", which is already in the list
 morocco	proper noun
+tommy	proper noun
+springfield	proper noun
+oliver	proper noun
+congo	proper noun
+glen	proper noun
+botswana	proper noun
+nav	abbreviation or web jargon
 delays	plural of "delay", which is already in the list
+verizon	abbreviation or web jargon
+newcastle	proper noun
+lambda	abbreviation or web jargon
 tears	plural of "tear", which is already in the list
+performances	plural of "performance", which is already in the list
 fa	shorter than 3 letters
 societies	plural of "society", which is already in the list
+brazilian	proper noun
 ist	German, not English
+norwegian	proper noun
+honolulu	proper noun
+beatles	proper noun
 lips	plural of "lip", which is already in the list
+exchanges	plural of "exchange", which is already in the list
 rolls	plural of "roll", which is already in the list
+thomson	abbreviation or web jargon
 barnes	plural of "barn", which is already in the list
+malta	proper noun
 lc	shorter than 3 letters
 cnn	abbreviation or web jargon
+lil	abbreviation or web jargon
 das	German, not English
 exports	plural of "export", which is already in the list
+omaha	proper noun
 scholarships	plural of "scholarship", which is already in the list
+dominican	proper noun
+chad	proper noun
 loads	plural of "load", which is already in the list
 unions	plural of "union", which is already in the list
+sys	abbreviation or web jargon
+solaris	abbreviation or web jargon
+josh	proper noun
+scales	plural of "scale", which is already in the list
 investigations	plural of "investigation", which is already in the list
+icq	abbreviation or web jargon
+yamaha	proper noun
 medications	plural of "medication", which is already in the list
+rochester	proper noun
+solomon	proper noun
 stops	plural of "stop", which is already in the list
+scsi	abbreviation or web jargon
 focuses	plural of "focus", which is already in the list
+soviet	proper noun
 cu	shorter than 3 letters
 laboratories	plural of "laboratory", which is already in the list
+volumes	plural of "volume", which is already in the list
+advances	plural of "advance", which is already in the list
+vegetables	plural of "vegetable", which is already in the list
 dns	abbreviation or web jargon
 thumbnails	abbreviation or web jargon
 pty	abbreviation or web jargon
 ws	shorter than 3 letters
 nuts	plural of "nut", which is already in the list
+bizrate	abbreviation or web jargon
 vienna	proper noun
+stanford	proper noun
+sox	abbreviation or web jargon
+gamespot	abbreviation or web jargon
 layers	plural of "layer", which is already in the list
+wordpress	abbreviation or web jargon
+bahamas	proper noun
+powell	proper noun
+univ	abbreviation or web jargon
+perspectives	plural of "perspective", which is already in the list
+hampton	proper noun
 christians	plural of "christian", which is already in the list
 borders	plural of "border", which is already in the list
 pads	plural of "pad", which is already in the list
+butts	abbreviation or web jargon
 inns	plural of "inn", which is already in the list
-wines	plural of "win", which is already in the list
+bobby	proper noun
+lectures	plural of "lecture", which is already in the list
+wines	plural of "wine", which is already in the list
 cups	plural of "cup", which is already in the list
 accidents	plural of "accident", which is already in the list
+travesti	German, not English
+stuart	proper noun
 contributors	plural of "contributor", which is already in the list
+salvador	proper noun
+ali	proper noun
 np	shorter than 3 letters
+monroe	proper noun
 violations	plural of "violation", which is already in the list
+temperatures	plural of "temperature", which is already in the list
 clouds	plural of "cloud", which is already in the list
 competitions	plural of "competition", which is already in the list
+tft	abbreviation or web jargon
+tanzania	proper noun
+jvc	abbreviation or web jargon
 cosmetics	plural of "cosmetic", which is already in the list
 theories	plural of "theory", which is already in the list
 jeremy	proper noun
 venice	proper noun
 concentrations	plural of "concentration", which is already in the list
+estonia	proper noun
 streams	plural of "stream", which is already in the list
+katie	proper noun
 negotiations	plural of "negotiation", which is already in the list
 dt	shorter than 3 letters
 cgi	abbreviation or web jargon
 asks	plural of "ask", which is already in the list
+namibia	proper noun
+christina	proper noun
 sells	plural of "sell", which is already in the list
 ecuador	proper noun
 modifications	plural of "modification", which is already in the list
+colin	proper noun
 paths	plural of "path", which is already in the list
+por	abbreviation or web jargon
+tribune	abbreviation or web jargon
 acids	plural of "acid", which is already in the list
 viruses	plural of "virus", which is already in the list
+mem	abbreviation or web jargon
+samoa	proper noun
 gc	shorter than 3 letters
 stickers	plural of "sticker", which is already in the list
 exceptions	plural of "exception", which is already in the list
 reactions	plural of "reaction", which is already in the list
+lauren	proper noun
 beliefs	plural of "belief", which is already in the list
 ci	shorter than 3 letters
+macromedia	abbreviation or web jargon
+ashley	proper noun
 divisions	plural of "division", which is already in the list
+wages	plural of "wage", which is already in the list
 forests	plural of "forest", which is already in the list
+nano	abbreviation or web jargon
 concerts	plural of "concert", which is already in the list
+males	plural of "male", which is already in the list
+victorian	proper noun
 colours	plural of "colour", which is already in the list
+genres	plural of "genre", which is already in the list
+cambodia	proper noun
 patents	plural of "patent", which is already in the list
 copyrights	plural of "copyright", which is already in the list
 yn	shorter than 3 letters
+lithuania	proper noun
+mastercard	abbreviation or web jargon
+chronicles	plural of "chronicle", which is already in the list
 readings	plural of "reading", which is already in the list
+kijiji	abbreviation or web jargon
+eagles	plural of "eagle", which is already in the list
+bases	plural of "base", which is already in the list
+vii	abbreviation or web jargon
 campaigns	plural of "campaign", which is already in the list
 rats	plural of "rat", which is already in the list
+defines	plural of "define", which is already in the list
 airports	plural of "airport", which is already in the list
+instances	plural of "instance", which is already in the list
+cfr	abbreviation or web jargon
 packets	plural of "packet", which is already in the list
+incentives	plural of "incentive", which is already in the list
 beaches	plural of "beach", which is already in the list
 folders	plural of "folder", which is already in the list
+surfaces	plural of "surface", which is already in the list
 routers	plural of "router", which is already in the list
 dresses	plural of "dress", which is already in the list
 baptist	proper noun
 clocks	plural of "clock", which is already in the list
 bios	plural of "bio", which is already in the list
+females	plural of "female", which is already in the list
+wallace	proper noun
 reflects	plural of "reflect", which is already in the list
 practitioners	plural of "practitioner", which is already in the list
 nb	shorter than 3 letters
@@ -1646,9 +2263,11 @@ ruth	proper noun
 compounds	plural of "compound", which is already in the list
 drums	plural of "drum", which is already in the list
 chicks	plural of "chick", which is already in the list
+graduates	plural of "graduate", which is already in the list
 recommends	plural of "recommend", which is already in the list
 distributors	plural of "distributor", which is already in the list
 tanks	plural of "tank", which is already in the list
+particles	plural of "particle", which is already in the list
 bolivia	proper noun
 stevens	plural of "steven", which is already in the list
 emily	proper noun
@@ -1656,6 +2275,7 @@ rx	shorter than 3 letters
 warnings	plural of "warning", which is already in the list
 apps	plural of "app", which is already in the list
 inquiries	plural of "inquiry", which is already in the list
+cycles	plural of "cycle", which is already in the list
 affects	plural of "affect", which is already in the list
 forecasts	plural of "forecast", which is already in the list
 pb	shorter than 3 letters
@@ -1667,6 +2287,8 @@ oe	shorter than 3 letters
 gif	abbreviation or web jargon
 pros	plural of "pro", which is already in the list
 conflicts	plural of "conflict", which is already in the list
+elvis	proper noun
+latvia	proper noun
 travelers	plural of "traveler", which is already in the list
 barriers	plural of "barrier", which is already in the list
 cant	abbreviation or web jargon
@@ -1675,12 +2297,14 @@ offerings	plural of "offering", which is already in the list
 trains	plural of "train", which is already in the list
 metals	plural of "metal", which is already in the list
 minerals	plural of "mineral", which is already in the list
+bottles	plural of "bottle", which is already in the list
 wy	shorter than 3 letters
 dm	shorter than 3 letters
 hughes	plural of "hugh", which is already in the list
 photographers	plural of "photographer", which is already in the list
 infections	plural of "infection", which is already in the list
 jeffrey	proper noun
+operates	plural of "operate", which is already in the list
 brisbane	proper noun
 festivals	plural of "festival", which is already in the list
 menus	plural of "menu", which is already in the list
@@ -1690,11 +2314,15 @@ herbs	plural of "herb", which is already in the list
 clinics	plural of "clinic", which is already in the list
 manitoba	proper noun
 missions	plural of "mission", which is already in the list
+costumes	plural of "costume", which is already in the list
 bryan	proper noun
 tries	plural of "try", which is already in the list
 transexuales	plural of "transexual", which is already in the list
+executives	plural of "executive", which is already in the list
 enquiries	plural of "enquiry", which is already in the list
+audi	abbreviation or web jargon
 showers	plural of "shower", which is already in the list
+statutes	plural of "statute", which is already in the list
 drops	plural of "drop", which is already in the list
 jc	shorter than 3 letters
 plugins	abbreviation or web jargon
@@ -1702,21 +2330,30 @@ sensors	plural of "sensor", which is already in the list
 ministers	plural of "minister", which is already in the list
 geneva	proper noun
 headers	plural of "header", which is already in the list
+mistakes	plural of "mistake", which is already in the list
+princeton	proper noun
 jacob	proper noun
 randy	proper noun
 childrens	plural of "children", which is already in the list
 avi	abbreviation or web jargon
+bridges	plural of "bridge", which is already in the list
 pins	plural of "pin", which is already in the list
 carlos	plural of "carlo", which is already in the list
 donna	proper noun
 andreas	plural of "andrea", which is already in the list
+ide	abbreviation or web jargon
 patricia	proper noun
 pd	shorter than 3 letters
+adidas	proper noun
 perth	proper noun
+harvey	proper noun
+tires	plural of "tire", which is already in the list
 logs	plural of "log", which is already in the list
 gregory	proper noun
+episodes	plural of "episode", which is already in the list
 illustrations	plural of "illustration", which is already in the list
 suits	plural of "suit", which is already in the list
+chances	plural of "chance", which is already in the list
 glenn	proper noun
 ur	shorter than 3 letters
 auckland	proper noun
@@ -1724,10 +2361,12 @@ fruits	plural of "fruit", which is already in the list
 calculations	plural of "calculation", which is already in the list
 jpeg	abbreviation or web jargon
 crops	plural of "crop", which is already in the list
+reduces	plural of "reduce", which is already in the list
 calculators	plural of "calculator", which is already in the list
 dishes	plural of "dish", which is already in the list
 extends	plural of "extend", which is already in the list
 neighbors	plural of "neighbor", which is already in the list
+trades	plural of "trade", which is already in the list
 legends	plural of "legend", which is already in the list
 champions	plural of "champion", which is already in the list
 floors	plural of "floor", which is already in the list
@@ -1736,7 +2375,10 @@ projectors	plural of "projector", which is already in the list
 speaks	plural of "speak", which is already in the list
 pharmacies	plural of "pharmacy", which is already in the list
 ln	shorter than 3 letters
+latino	proper noun
+edges	plural of "edge", which is already in the list
 uc	shorter than 3 letters
+handles	plural of "handle", which is already in the list
 assumptions	plural of "assumption", which is already in the list
 twins	plural of "twin", which is already in the list
 gmbh	abbreviation or web jargon
@@ -1750,7 +2392,7 @@ vessels	plural of "vessel", which is already in the list
 walks	plural of "walk", which is already in the list
 keyboards	plural of "keyboard", which is already in the list
 honors	plural of "honor", which is already in the list
-bones	plural of "bon", which is already in the list
+bones	plural of "bone", which is already in the list
 notifications	plural of "notification", which is already in the list
 mf	shorter than 3 letters
 motels	plural of "motel", which is already in the list
@@ -1762,6 +2404,7 @@ foundations	plural of "foundation", which is already in the list
 mw	shorter than 3 letters
 nu	shorter than 3 letters
 liabilities	plural of "liability", which is already in the list
+prizes	plural of "prize", which is already in the list
 browsers	plural of "browser", which is already in the list
 dp	shorter than 3 letters
 ou	shorter than 3 letters
@@ -1779,11 +2422,13 @@ za	shorter than 3 letters
 ve	shorter than 3 letters
 julia	proper noun
 containers	plural of "container", which is already in the list
+attitudes	plural of "attitude", which is already in the list
 bermuda	proper noun
+mobiles	plural of "mobile", which is already in the list
 screenshot	abbreviation or web jargon
 exhibitions	plural of "exhibition", which is already in the list
 exhibits	plural of "exhibit", which is already in the list
-dies	plural of "di", which is already in the list
+dies	plural of "die", which is already in the list
 novels	plural of "novel", which is already in the list
 rh	shorter than 3 letters
 recipients	plural of "recipient", which is already in the list
@@ -1791,10 +2436,12 @@ traditions	plural of "tradition", which is already in the list
 fg	shorter than 3 letters
 fixes	plural of "fix", which is already in the list
 sends	plural of "send", which is already in the list
+mazda	proper noun
 throws	plural of "throw", which is already in the list
 uruguay	proper noun
 hz	shorter than 3 letters
 tablets	plural of "tablet", which is already in the list
+futures	plural of "future", which is already in the list
 highs	plural of "high", which is already in the list
 humanities	plural of "humanity", which is already in the list
 launches	plural of "launch", which is already in the list
@@ -1802,10 +2449,12 @@ bk	shorter than 3 letters
 towers	plural of "tower", which is already in the list
 racks	plural of "rack", which is already in the list
 deposits	plural of "deposit", which is already in the list
+trustees	plural of "trustee", which is already in the list
 watts	plural of "watt", which is already in the list
+duncan	proper noun
 reprints	plural of "reprint", which is already in the list
 resolutions	plural of "resolution", which is already in the list
-tubes	plural of "tub", which is already in the list
+tubes	plural of "tube", which is already in the list
 analysts	plural of "analyst", which is already in the list
 dx	shorter than 3 letters
 sk	shorter than 3 letters
@@ -1820,14 +2469,17 @@ arctic	proper noun
 exams	plural of "exam", which is already in the list
 rewards	plural of "reward", which is already in the list
 aj	shorter than 3 letters
+welsh	proper noun
 advertisements	plural of "advertisement", which is already in the list
 quarters	plural of "quarter", which is already in the list
 cia	abbreviation or web jargon
+determines	plural of "determine", which is already in the list
 ears	plural of "ear", which is already in the list
 wp	shorter than 3 letters
 naturals	plural of "natural", which is already in the list
 lenders	plural of "lender", which is already in the list
 bloggers	plural of "blogger", which is already in the list
+agrees	plural of "agree", which is already in the list
 passengers	plural of "passenger", which is already in the list
 quantities	plural of "quantity", which is already in the list
 cons	plural of "con", which is already in the list
@@ -1837,6 +2489,7 @@ guitars	plural of "guitar", which is already in the list
 tp	shorter than 3 letters
 jm	shorter than 3 letters
 scholars	plural of "scholar", which is already in the list
+dpi	abbreviation or web jargon
 vp	shorter than 3 letters
 segments	plural of "segment", which is already in the list
 specifics	plural of "specific", which is already in the list
@@ -1855,6 +2508,7 @@ distributions	plural of "distribution", which is already in the list
 bookings	plural of "booking", which is already in the list
 republicans	plural of "republican", which is already in the list
 discusses	plural of "discuss", which is already in the list
+ver	abbreviation or web jargon
 rn	shorter than 3 letters
 abstracts	plural of "abstract", which is already in the list
 pharmaceuticals	plural of "pharmaceutical", which is already in the list
@@ -1862,6 +2516,7 @@ cg	shorter than 3 letters
 ascii	abbreviation or web jargon
 citations	plural of "citation", which is already in the list
 href	abbreviation or web jargon
+shapes	plural of "shape", which is already in the list
 diane	proper noun
 disclaimers	plural of "disclaimer", which is already in the list
 championships	plural of "championship", which is already in the list
@@ -1879,7 +2534,9 @@ penalties	plural of "penalty", which is already in the list
 joshua	proper noun
 trackbacks	plural of "trackback", which is already in the list
 tigers	plural of "tiger", which is already in the list
+slides	plural of "slide", which is already in the list
 milan	proper noun
+villages	plural of "village", which is already in the list
 christine	proper noun
 marilyn	proper noun
 lions	plural of "lion", which is already in the list
@@ -1892,6 +2549,7 @@ chambers	plural of "chamber", which is already in the list
 greetings	plural of "greeting", which is already in the list
 vocals	plural of "vocal", which is already in the list
 biographies	plural of "biography", which is already in the list
+finnish	proper noun
 bm	shorter than 3 letters
 prisoners	plural of "prisoner", which is already in the list
 muslims	plural of "muslim", which is already in the list
@@ -1900,6 +2558,7 @@ reveals	plural of "reveal", which is already in the list
 architects	plural of "architect", which is already in the list
 saints	plural of "saint", which is already in the list
 carries	plural of "carry", which is already in the list
+saves	plural of "save", which is already in the list
 tunisia	proper noun
 appointments	plural of "appointment", which is already in the list
 str	abbreviation or web jargon
@@ -1909,6 +2568,7 @@ academics	plural of "academic", which is already in the list
 pubs	plural of "pub", which is already in the list
 lucas	proper noun
 screensavers	plural of "screensaver", which is already in the list
+tribes	plural of "tribe", which is already in the list
 clicks	plural of "click", which is already in the list
 hazards	plural of "hazard", which is already in the list
 cabinets	plural of "cabinet", which is already in the list
@@ -1916,9 +2576,12 @@ shadows	plural of "shadow", which is already in the list
 weblogs	plural of "weblog", which is already in the list
 belongs	plural of "belong", which is already in the list
 rj	shorter than 3 letters
+ensures	plural of "ensure", which is already in the list
+relatives	plural of "relative", which is already in the list
 bracelets	plural of "bracelet", which is already in the list
 realtors	plural of "realtor", which is already in the list
 adjustments	plural of "adjustment", which is already in the list
+estates	plural of "estate", which is already in the list
 maintains	plural of "maintain", which is already in the list
 ka	shorter than 3 letters
 andrews	plural of "andrew", which is already in the list
@@ -1929,24 +2592,33 @@ brandon	proper noun
 giants	plural of "giant", which is already in the list
 moderators	plural of "moderator", which is already in the list
 standings	plural of "standing", which is already in the list
+consoles	plural of "console", which is already in the list
 fbi	abbreviation or web jargon
 translations	plural of "translation", which is already in the list
 rp	shorter than 3 letters
+guarantees	plural of "guarantee", which is already in the list
 infants	plural of "infant", which is already in the list
 eh	shorter than 3 letters
 sie	German, not English
 graphs	plural of "graph", which is already in the list
+cigarettes	plural of "cigarette", which is already in the list
 enemies	plural of "enemy", which is already in the list
 lows	plural of "low", which is already in the list
 controllers	plural of "controller", which is already in the list
 emma	proper noun
+finances	plural of "finance", which is already in the list
 accepts	plural of "accept", which is already in the list
 conventions	plural of "convention", which is already in the list
 eva	proper noun
 hc	shorter than 3 letters
+coordinates	plural of "coordinate", which is already in the list
 fp	shorter than 3 letters
+promises	plural of "promise", which is already in the list
 jj	shorter than 3 letters
 representations	plural of "representation", which is already in the list
+tunes	plural of "tune", which is already in the list
+combines	plural of "combine", which is already in the list
+phrases	plural of "phrase", which is already in the list
 speeches	plural of "speech", which is already in the list
 reaches	plural of "reach", which is already in the list
 considers	plural of "consider", which is already in the list
@@ -1954,6 +2626,7 @@ catalogs	plural of "catalog", which is already in the list
 ministries	plural of "ministry", which is already in the list
 dans	plural of "dan", which is already in the list
 planets	plural of "planet", which is already in the list
+metadata	abbreviation or web jargon
 harold	proper noun
 circuits	plural of "circuit", which is already in the list
 ev	shorter than 3 letters
@@ -1971,19 +2644,22 @@ gl	shorter than 3 letters
 ui	shorter than 3 letters
 hindu	proper noun
 dh	shorter than 3 letters
+fragrances	plural of "fragrance", which is already in the list
 markers	plural of "marker", which is already in the list
 weights	plural of "weight", which is already in the list
+introduces	plural of "introduce", which is already in the list
 kills	plural of "kill", which is already in the list
 webcams	plural of "webcam", which is already in the list
 webmasters	plural of "webmaster", which is already in the list
 ro	shorter than 3 letters
 df	shorter than 3 letters
 handhelds	plural of "handheld", which is already in the list
+failures	plural of "failure", which is already in the list
 nails	plural of "nail", which is already in the list
 whats	abbreviation or web jargon
-rides	plural of "rid", which is already in the list
+rides	plural of "ride", which is already in the list
 combinations	plural of "combination", which is already in the list
-planes	plural of "plan", which is already in the list
+planes	plural of "plane", which is already in the list
 disks	plural of "disk", which is already in the list
 sans	plural of "san", which is already in the list
 builds	plural of "build", which is already in the list
@@ -1991,6 +2667,7 @@ recorders	plural of "recorder", which is already in the list
 postings	plural of "posting", which is already in the list
 innovations	plural of "innovation", which is already in the list
 postcards	plural of "postcard", which is already in the list
+fires	plural of "fire", which is already in the list
 algeria	proper noun
 favors	plural of "favor", which is already in the list
 sticks	plural of "stick", which is already in the list
@@ -1998,12 +2675,16 @@ ez	shorter than 3 letters
 reforms	plural of "reform", which is already in the list
 pf	shorter than 3 letters
 uw	shorter than 3 letters
+bloomberg	proper noun
 banners	plural of "banner", which is already in the list
 bd	shorter than 3 letters
+circles	plural of "circle", which is already in the list
 beats	plural of "beat", which is already in the list
 scenarios	plural of "scenario", which is already in the list
 hearings	plural of "hearing", which is already in the list
+beverages	plural of "beverage", which is already in the list
 knights	plural of "knight", which is already in the list
+medicines	plural of "medicine", which is already in the list
 trainers	plural of "trainer", which is already in the list
 enhancements	plural of "enhancement", which is already in the list
 passwords	plural of "password", which is already in the list
@@ -2013,6 +2694,7 @@ hh	shorter than 3 letters
 uh	shorter than 3 letters
 advisors	plural of "advisor", which is already in the list
 trusts	plural of "trust", which is already in the list
+provinces	plural of "province", which is already in the list
 finals	plural of "final", which is already in the list
 paraguay	proper noun
 fd	shorter than 3 letters
@@ -2024,28 +2706,34 @@ warriors	plural of "warrior", which is already in the list
 libs	plural of "lib", which is already in the list
 wm	shorter than 3 letters
 pk	shorter than 3 letters
+strikes	plural of "strike", which is already in the list
 gays	plural of "gay", which is already in the list
 belfast	proper noun
 charms	plural of "charm", which is already in the list
 bucks	plural of "buck", which is already in the list
+raises	plural of "raise", which is already in the list
 remedies	plural of "remedy", which is already in the list
 performs	plural of "perform", which is already in the list
 plastics	plural of "plastic", which is already in the list
 salaries	plural of "salary", which is already in the list
 buses	plural of "bus", which is already in the list
 wb	shorter than 3 letters
+creatures	plural of "creature", which is already in the list
 vids	plural of "vid", which is already in the list
 corners	plural of "corner", which is already in the list
+yale	proper noun
 sn	shorter than 3 letters
 dk	shorter than 3 letters
 louise	proper noun
 owen	proper noun
+routines	plural of "routine", which is already in the list
 beings	plural of "being", which is already in the list
 issn	abbreviation or web jargon
 podcasts	plural of "podcast", which is already in the list
 fu	shorter than 3 letters
 outputs	plural of "output", which is already in the list
 angela	proper noun
+relates	plural of "relate", which is already in the list
 referrals	plural of "referral", which is already in the list
 mods	plural of "mod", which is already in the list
 sorts	plural of "sort", which is already in the list
@@ -2063,16 +2751,22 @@ councils	plural of "council", which is already in the list
 occupations	plural of "occupation", which is already in the list
 pockets	plural of "pocket", which is already in the list
 zu	shorter than 3 letters
+pipes	plural of "pipe", which is already in the list
+cottages	plural of "cottage", which is already in the list
 develops	plural of "develop", which is already in the list
 dg	shorter than 3 letters
 vg	shorter than 3 letters
+institutes	plural of "institute", which is already in the list
 fo	shorter than 3 letters
 prefers	plural of "prefer", which is already in the list
+brochures	plural of "brochure", which is already in the list
 tomatoes	plural of "tomato", which is already in the list
 beginners	plural of "beginner", which is already in the list
 instructors	plural of "instructor", which is already in the list
 clusters	plural of "cluster", which is already in the list
 io	shorter than 3 letters
+demonstrates	plural of "demonstrate", which is already in the list
+phases	plural of "phase", which is already in the list
 grows	plural of "grow", which is already in the list
 ul	shorter than 3 letters
 ol	shorter than 3 letters
@@ -2082,12 +2776,18 @@ religions	plural of "religion", which is already in the list
 hostels	plural of "hostel", which is already in the list
 pn	shorter than 3 letters
 briefs	plural of "brief", which is already in the list
+signatures	plural of "signature", which is already in the list
 diffs	plural of "diff", which is already in the list
+disciplines	plural of "discipline", which is already in the list
 mu	shorter than 3 letters
 daughters	plural of "daughter", which is already in the list
 conversations	plural of "conversation", which is already in the list
 radios	plural of "radio", which is already in the list
+nvidia	abbreviation or web jargon
+muscles	plural of "muscle", which is already in the list
 hq	shorter than 3 letters
+nbc	abbreviation or web jargon
+influences	plural of "influence", which is already in the list
 inspections	plural of "inspection", which is already in the list
 wt	shorter than 3 letters
 writings	plural of "writing", which is already in the list
@@ -2097,28 +2797,34 @@ qualities	plural of "quality", which is already in the list
 fathers	plural of "father", which is already in the list
 rb	shorter than 3 letters
 pens	plural of "pen", which is already in the list
+yen	abbreviation or web jargon
 strips	plural of "strip", which is already in the list
 rangers	plural of "ranger", which is already in the list
 mh	shorter than 3 letters
 commitments	plural of "commitment", which is already in the list
 skirts	plural of "skirt", which is already in the list
 mats	plural of "mat", which is already in the list
+privileges	plural of "privilege", which is already in the list
 televisions	plural of "television", which is already in the list
 commodities	plural of "commodity", which is already in the list
 serbia	proper noun
 spies	plural of "spy", which is already in the list
+motorcycles	plural of "motorcycle", which is already in the list
 highways	plural of "highway", which is already in the list
 rounds	plural of "round", which is already in the list
 tions	plural of "tion", which is already in the list
 intervals	plural of "interval", which is already in the list
+sentences	plural of "sentence", which is already in the list
 receivers	plural of "receiver", which is already in the list
 urls	abbreviation or web jargon
 investigators	plural of "investigator", which is already in the list
 baths	plural of "bath", which is already in the list
 gg	shorter than 3 letters
+brakes	plural of "brake", which is already in the list
 og	shorter than 3 letters
 ko	shorter than 3 letters
 owns	plural of "own", which is already in the list
+landscapes	plural of "landscape", which is already in the list
 ww	shorter than 3 letters
 predictions	plural of "prediction", which is already in the list
 gd	shorter than 3 letters
@@ -2129,8 +2835,10 @@ dylan	proper noun
 bras	plural of "bra", which is already in the list
 belts	plural of "belt", which is already in the list
 blacks	plural of "black", which is already in the list
+rebates	plural of "rebate", which is already in the list
 reporters	plural of "reporter", which is already in the list
 kyle	proper noun
+curves	plural of "curve", which is already in the list
 bw	shorter than 3 letters
 mj	shorter than 3 letters
 travels	plural of "travel", which is already in the list
@@ -2139,11 +2847,13 @@ hayes	plural of "hay", which is already in the list
 invitations	plural of "invitation", which is already in the list
 economies	plural of "economy", which is already in the list
 johns	plural of "john", which is already in the list
+valves	plural of "valve", which is already in the list
 gaps	plural of "gap", which is already in the list
 achievements	plural of "achievement", which is already in the list
 donors	plural of "donor", which is already in the list
 lf	shorter than 3 letters
 teaches	plural of "teach", which is already in the list
+ventures	plural of "venture", which is already in the list
 nato	abbreviation or web jargon
 pensions	plural of "pension", which is already in the list
 prayers	plural of "prayer", which is already in the list
@@ -2151,9 +2861,10 @@ paragraphs	plural of "paragraph", which is already in the list
 joins	plural of "join", which is already in the list
 nominations	plural of "nomination", which is already in the list
 mpegs	plural of "mpeg", which is already in the list
+cakes	plural of "cake", which is already in the list
 wc	shorter than 3 letters
 stays	plural of "stay", which is already in the list
-mines	plural of "min", which is already in the list
+mines	plural of "mine", which is already in the list
 portraits	plural of "portrait", which is already in the list
 logan	proper noun
 evaluations	plural of "evaluation", which is already in the list
@@ -2163,14 +2874,16 @@ ratios	plural of "ratio", which is already in the list
 ty	shorter than 3 letters
 cj	shorter than 3 letters
 senators	plural of "senator", which is already in the list
-lanes	plural of "lan", which is already in the list
+lanes	plural of "lane", which is already in the list
 fundamentals	plural of "fundamental", which is already in the list
 opponents	plural of "opponent", which is already in the list
 condos	plural of "condo", which is already in the list
 plots	plural of "plot", which is already in the list
+tulsa	proper noun
 draws	plural of "draw", which is already in the list
 qc	shorter than 3 letters
 simpsons	plural of "simpson", which is already in the list
+blades	plural of "blade", which is already in the list
 loops	plural of "loop", which is already in the list
 aw	shorter than 3 letters
 tf	shorter than 3 letters
@@ -2182,6 +2895,7 @@ arrivals	plural of "arrival", which is already in the list
 cw	shorter than 3 letters
 wr	shorter than 3 letters
 rg	shorter than 3 letters
+wires	plural of "wire", which is already in the list
 bl	shorter than 3 letters
 dictionaries	plural of "dictionary", which is already in the list
 mails	plural of "mail", which is already in the list
@@ -2197,6 +2911,9 @@ reflections	plural of "reflection", which is already in the list
 joyce	proper noun
 bg	shorter than 3 letters
 planners	plural of "planner", which is already in the list
+disputes	plural of "dispute", which is already in the list
+textiles	plural of "textile", which is already in the list
+closes	plural of "close", which is already in the list
 deborah	proper noun
 assists	plural of "assist", which is already in the list
 summaries	plural of "summary", which is already in the list
@@ -2207,6 +2924,8 @@ modems	plural of "modem", which is already in the list
 hu	shorter than 3 letters
 kw	shorter than 3 letters
 supervisors	plural of "supervisor", which is already in the list
+distances	plural of "distance", which is already in the list
+treasures	plural of "treasure", which is already in the list
 mia	proper noun
 transcripts	plural of "transcript", which is already in the list
 wan	abbreviation or web jargon
@@ -2215,7 +2934,7 @@ robots	plural of "robot", which is already in the list
 creations	plural of "creation", which is already in the list
 acquisitions	plural of "acquisition", which is already in the list
 seas	plural of "sea", which is already in the list
-tiles	plural of "til", which is already in the list
+tiles	plural of "tile", which is already in the list
 subsidiaries	plural of "subsidiary", which is already in the list
 ru	shorter than 3 letters
 richards	plural of "richard", which is already in the list
@@ -2226,8 +2945,10 @@ reductions	plural of "reduction", which is already in the list
 viewers	plural of "viewer", which is already in the list
 enters	plural of "enter", which is already in the list
 wu	shorter than 3 letters
+resumes	plural of "resume", which is already in the list
 generators	plural of "generator", which is already in the list
 lu	shorter than 3 letters
+generates	plural of "generate", which is already in the list
 potatoes	plural of "potato", which is already in the list
 receptors	plural of "receptor", which is already in the list
 peers	plural of "peer", which is already in the list
@@ -2243,17 +2964,24 @@ fabrics	plural of "fabric", which is already in the list
 antibodies	plural of "antibody", which is already in the list
 examinations	plural of "examination", which is already in the list
 surgeons	plural of "surgeon", which is already in the list
+promotes	plural of "promote", which is already in the list
 spas	plural of "spa", which is already in the list
+shades	plural of "shade", which is already in the list
 jets	plural of "jet", which is already in the list
+roommates	plural of "roommate", which is already in the list
 adware	abbreviation or web jargon
 frankfurt	proper noun
+encourages	plural of "encourage", which is already in the list
 terminals	plural of "terminal", which is already in the list
 simulations	plural of "simulation", which is already in the list
 cz	shorter than 3 letters
+examines	plural of "examine", which is already in the list
 budapest	proper noun
 hl	shorter than 3 letters
+arrives	plural of "arrive", which is already in the list
+automobiles	plural of "automobile", which is already in the list
 ob	shorter than 3 letters
-fares	plural of "far", which is already in the list
+fares	plural of "fare", which is already in the list
 monsters	plural of "monster", which is already in the list
 outlets	plural of "outlet", which is already in the list
 varieties	plural of "variety", which is already in the list

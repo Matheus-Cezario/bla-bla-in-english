@@ -1,62 +1,12 @@
 import 'dart:io';
 
-import 'package:bla_bla_in_english/data/schema.dart';
 import 'package:bla_bla_in_english/models/answer_kind.dart';
 import 'package:bla_bla_in_english/models/word_status.dart';
 import 'package:bla_bla_in_english/repositories/session_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:path/path.dart' as p;
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
-/// Builds a progress database with a dictionary attached, mirroring how
-/// [AppDatabase] wires the two files together at runtime.
-Future<Database> openTestDatabase(Directory dir, {required int words}) async {
-  final dictionaryPath = p.join(dir.path, 'dictionary.db');
-
-  final dictionary = await databaseFactoryFfi.openDatabase(dictionaryPath);
-  for (final statement in dictionarySchema) {
-    await dictionary.execute(statement);
-  }
-
-  // Every word gets 5 sentences, each with the three kinds of option, so the
-  // fixtures match what the generator is contracted to produce.
-  for (var w = 1; w <= words; w++) {
-    await dictionary.insert('words', {
-      'id': w,
-      'word': 'word$w',
-      'frequency_rank': w,
-    });
-    for (var position = 1; position <= 5; position++) {
-      final sentenceId = w * 10 + position;
-      await dictionary.insert('sentences', {
-        'id': sentenceId,
-        'word_id': w,
-        'position': position,
-        'text': 'A #word$w# in sentence $position.',
-      });
-      for (final kind in AnswerKind.values) {
-        await dictionary.insert('options', {
-          'sentence_id': sentenceId,
-          'text': '${kind.name} meaning of word$w ($position)',
-          'kind': kind.id,
-        });
-      }
-    }
-  }
-  await dictionary.close();
-
-  final db = await databaseFactoryFfi.openDatabase(
-    p.join(dir.path, 'progress.db'),
-  );
-  // Mirrors AppDatabase.onConfigure. Without it ON DELETE CASCADE is inert and
-  // deleting a session would leave its items behind.
-  await db.execute('PRAGMA foreign_keys = ON');
-  for (final statement in progressSchema) {
-    await db.execute(statement);
-  }
-  await db.execute('ATTACH DATABASE ? AS $dictionaryAlias', [dictionaryPath]);
-  return db;
-}
+import 'test_database.dart';
 
 void main() {
   sqfliteFfiInit();
@@ -192,6 +142,185 @@ void main() {
       () async {
     final items = await repo.todaySession(wordsPerDay: 200);
     expect(items, hasLength(50));
+  });
+
+  group('extending the day', () {
+    test('adds new words instead of handing back the ones already queued',
+        () async {
+      final first = await repo.todaySession(wordsPerDay: 5);
+      final extended = await repo.extendTodaySession(wordsPerDay: 5);
+
+      expect(extended, hasLength(10));
+      // The first five must survive untouched, in place.
+      expect(
+        extended.take(5).map((i) => i.sessionItemId),
+        first.map((i) => i.sessionItemId),
+      );
+      // And nothing may be queued twice.
+      expect(extended.map((i) => i.wordId).toSet(), hasLength(10));
+
+      final sessions = await db.query('sessions');
+      expect(sessions, hasLength(1), reason: 'still the same day');
+      expect(sessions.first['target_words'], 10);
+    });
+
+    test('re-draws words the user just answered only when nothing else is left',
+        () async {
+      final items = await repo.todaySession(wordsPerDay: 5);
+      for (final item in items) {
+        await repo.recordAnswer(item: item, kind: AnswerKind.wrong);
+      }
+
+      final extended = await repo.extendTodaySession(wordsPerDay: 5);
+      expect(extended.map((i) => i.wordId).toSet(), hasLength(10));
+    });
+
+    test('leaves the session alone when the dictionary is exhausted', () async {
+      final full = await repo.todaySession(wordsPerDay: 50);
+      final extended = await repo.extendTodaySession(wordsPerDay: 5);
+
+      expect(extended, hasLength(full.length));
+      final sessions = await db.query('sessions');
+      expect(sessions.first['target_words'], 50,
+          reason: 'the target must not grow when nothing was added');
+    });
+
+    test('only plans the day when there is no session to extend yet', () async {
+      final items = await repo.extendTodaySession(wordsPerDay: 4);
+
+      expect(items, hasLength(4));
+      expect(await db.query('sessions'), hasLength(1));
+    });
+  });
+
+  group('searching words', () {
+    test('matches by prefix, exact match first', () async {
+      final results = await repo.searchWords('word1');
+
+      expect(results.first.word, 'word1');
+      // word1, word10..word19
+      expect(results.map((r) => r.word), hasLength(11));
+      expect(results.every((r) => r.word.startsWith('word1')), isTrue);
+    });
+
+    test('reports status and whether the word is already queued today',
+        () async {
+      final items = await repo.todaySession(wordsPerDay: 3);
+      await repo.recordAnswer(item: items.first, kind: AnswerKind.wrong);
+
+      final queued = (await repo.searchWords('word1')).first;
+      expect(queued.word, 'word1');
+      expect(queued.inTodaySession, isTrue);
+      expect(queued.status, WordStatus.wrong);
+
+      final untouched =
+          (await repo.searchWords('word40')).firstWhere((r) => r.word == 'word40');
+      expect(untouched.inTodaySession, isFalse);
+      expect(untouched.status, WordStatus.fresh);
+    });
+
+    test('an empty query browses the dictionary, most common first', () async {
+      final results = await repo.searchWords('   ');
+
+      expect(results, hasLength(SessionRepository.searchPageSize));
+      expect(
+        results.take(3).map((r) => r.word),
+        ['word1', 'word2', 'word3'],
+        reason: 'frequency_rank 1..3 are the most common in the fixture',
+      );
+    });
+
+    test('paging walks the dictionary without repeating or skipping a word',
+        () async {
+      final seen = <String>[];
+      for (var offset = 0; offset < 50; offset += 20) {
+        final page = await repo.searchWords('', limit: 20, offset: offset);
+        seen.addAll(page.map((r) => r.word));
+      }
+
+      expect(seen, hasLength(50));
+      expect(seen.toSet(), hasLength(50), reason: 'no word appears twice');
+      expect(seen.first, 'word1');
+      expect(seen.last, 'word50');
+    });
+
+    test('a short page is how the end of the dictionary announces itself',
+        () async {
+      final last = await repo.searchWords('', limit: 20, offset: 40);
+
+      expect(last, hasLength(10));
+      expect(last.length, lessThan(20));
+    });
+
+    test('paging a search stays inside the matches', () async {
+      // word1, word10..word19 — eleven matches.
+      final first = await repo.searchWords('word1', limit: 4);
+      final second = await repo.searchWords('word1', limit: 4, offset: 4);
+      final third = await repo.searchWords('word1', limit: 4, offset: 8);
+
+      final all = [...first, ...second, ...third].map((r) => r.word).toList();
+      expect(all, hasLength(11));
+      expect(all.toSet(), hasLength(11));
+      expect(all.every((word) => word.startsWith('word1')), isTrue);
+      expect(all.first, 'word1', reason: 'the exact match still leads');
+    });
+
+    test('LIKE wildcards typed by the user are matched literally', () async {
+      expect(await repo.searchWords('%'), isEmpty);
+      expect(await repo.searchWords('word_'), isEmpty);
+    });
+  });
+
+  group('adding picked words', () {
+    test('appends them to the end, in the order they were picked', () async {
+      final before = await repo.todaySession(wordsPerDay: 3);
+      final items = await repo.addWordsToTodaySession(
+        wordIds: [40, 12],
+        wordsPerDay: 3,
+      );
+
+      expect(items, hasLength(before.length + 2));
+      expect(items.skip(3).map((i) => i.word), ['word40', 'word12']);
+      expect((await db.query('sessions')).first['target_words'], 5);
+    });
+
+    test('skips words the session already holds', () async {
+      final before = await repo.todaySession(wordsPerDay: 3);
+      await repo.addWordsToTodaySession(wordIds: [40], wordsPerDay: 3);
+      final again = await repo.addWordsToTodaySession(
+        wordIds: [40, 1],
+        wordsPerDay: 3,
+      );
+
+      expect(again, hasLength(before.length + 1));
+      expect(again.map((i) => i.wordId).toSet(), hasLength(again.length));
+    });
+
+    test('picks up the word where the user left it off', () async {
+      final items = await repo.todaySession(wordsPerDay: 3);
+      final word2 = items.firstWhere((i) => i.word == 'word2');
+      await repo.recordAnswer(item: word2, kind: AnswerKind.near);
+      await db.delete('sessions'); // simulate the next calendar day
+
+      final added = await repo.addWordsToTodaySession(
+        wordIds: [word2.wordId],
+        wordsPerDay: 1,
+      );
+
+      expect(
+        added.firstWhere((i) => i.word == 'word2').sentenceText,
+        'A #word2# in sentence 2.',
+        reason: 'the first sentence is already done',
+      );
+    });
+
+    test('an unknown word id is ignored', () async {
+      final before = await repo.todaySession(wordsPerDay: 3);
+      final items =
+          await repo.addWordsToTodaySession(wordIds: [9999], wordsPerDay: 3);
+
+      expect(items, hasLength(before.length));
+    });
   });
 
   test('sentence parts split the target word out for highlighting', () async {

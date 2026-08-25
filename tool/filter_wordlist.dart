@@ -24,6 +24,60 @@ const int minLength = 3;
 /// Abbreviations, units and web/file jargon. Frequent on the web, useless as
 /// vocabulary.
 const Set<String> _jargon = {
+  'macromedia', 'mastercard', 'kijiji', 'cfr', 'vii', 'nano',
+  'por', 'mem', 'tribune',
+  'univ', 'tft', 'jvc', 'butts',
+  'bizrate', 'gamespot', 'wordpress', 'sox',
+  'sys', 'solaris', 'icq',
+  'nav', 'verizon', 'lambda', 'lil', 'thomson',
+  'nascar',
+  'pos', 'utils', 'phys', 'dialog', 'vic',
+  'atm', 'lang',
+  'peeing',
+  'cbs', 'nbc', 'spec', 'midi', 'realty',
+  'proc', 'olympus', 'lotus',
+  'kde', 'qt',
+  'kodak', 'approx', 'filename',
+  'vid', 'fda', 'hdtv', 'expansys',
+  'std',
+  'aaa', 'macintosh', 'sucking',
+  'gen', 'espn', 'marriott',
+  'mozilla', 'oclc', 'plc', 'msg',
+  'dos', 'combo',
+  'oem', 'lycos', 'zdnet', 'cnet', 'pcworld',
+  'chi', 'rfc', 'ins',
+  'gbp', 'jelsoft', 'photoshop', 'housewares', 'slideshow',
+  'lite', 'ghz', 'skype', 'gamecube', 'eng',
+  'tcp', 'dir', 'flickr', 'val', 'medicare',
+  'goto', 'iframe',
+  'ncaa', 'phd', 'pentium', 'aka', 'blogging',
+  'xhtml', 'dhtml',
+  'dealtime', 'temp', 'intro', 'tramadol', 'ent', 'vicodin', 'phentermine',
+  'mrs', 'inkjet', 'warner',
+  'struct', 'titans', 'herein',
+  'rev', 'nyc',
+  'sur', 'packard', 'hewlett',
+  'cal', 'rpm', 'tvs', 'cached', 'pee',
+  'compaq', 'showtimes', 'emachines', 'netgear',
+  'hrs', 'chevrolet', 'ford', 'audi', 'yen',
+  'usc', 'trembl', 'blvd', 'amd', 'ave', 'ext',
+  'aud', 'cad', 'spanking', 'fetish',
+  'telecom', 'nikon', 'canon', 'panasonic',
+  'nec', 'foto', 'vista', 'winxp',
+  'config', 'urw', 'wishlist', 'asin',
+  'trans', 'ver', 'nvidia',
+  'mod', 'bmw', 'twiki', 'rep', 'ceo', 'cto', 'cfo',
+  'tion', 'citysearch', 'nsw', 'pci', 'guestbook', 'ttf', 'scsi', 'ide',
+  'hist', 'inter', 'vbulletin', 'phpbb',
+  'def', 'org', 'ethernet', 'postposted', 'testimonials', 'cialis', 'epa', 'viagra', 'xanax',
+  'mph', 'modem', 'kbps', 'mbps', 'pixels', 'dpi',
+  'abc', 'livecam', 'biz', 'gcc', 'exp', 'lbs', 'lol',
+  'semi', 'cpanel', 'anytime',
+  'uniprotkb', 'pmid', 'medline', 'pubmed', 'ncbi', 'sci', 'med',
+  'ing', 'para', 'pcs', 'bio', 'sms', 'mms',
+  'qty', 'templates', 'template', 'router', 'metadata', 'thumbnail',
+  'voip', 'blogger', 'podcast', 'wiki', 'url', 'seo', 'cms', 'crm',
+  'wikipedia', 'res', 'que', 'header', 'footer', 'registry', 'admin',
   'const', 'dont', 'wont', 'cant', 'isnt', 'didnt', 'doesnt', 'arent',
   'werent', 'wasnt', 'couldnt', 'wouldnt', 'shouldnt', 'havent',
   'hasnt', 'hadnt', 'youre', 'theyre', 'thats', 'whats', 'lets',
@@ -31,7 +85,7 @@ const Set<String> _jargon = {
   'jan', 'feb', 'mar', 'apr', 'jun', 'jul', 'aug', 'sep', 'sept', 'oct', 'nov',
   'dec', 'mon', 'tue', 'tues', 'wed', 'thu', 'thur', 'thurs', 'fri', 'sat',
   'sun', 'inc', 'ltd', 'corp', 'dept', 'etc', 'vs', 'via', 'per',
-  'url', 'urls', 'http', 'https', 'www', 'html', 'htm', 'xml', 'php', 'asp',
+  'urls', 'http', 'https', 'www', 'html', 'htm', 'xml', 'php', 'asp',
   'aspx', 'cgi', 'css', 'sql', 'ftp', 'pdf', 'jpg', 'jpeg', 'gif', 'png',
   'mpeg', 'avi', 'exe', 'zip', 'rss', 'faq', 'faqs', 'api', 'apis',
   'cdn', 'dns', 'ssl', 'gnu', 'ascii', 'utf', 'iso', 'isbn', 'issn',
@@ -50,13 +104,72 @@ const Set<String> _jargon = {
   'username', 'usernames', 'personals', 'modules', 'module', 'plugin',
   'plugins', 'blog', 'blogs', 'webmaster', 'sitemap', 'homepage',
   'ecommerce', 'online', 'offline', 'website', 'websites', 'webpage',
-  'pic', 'pics', 'thumbnail', 'thumbnails', 'screenshot',
+  'pic', 'pics', 'thumbnails', 'screenshot',
 };
 
 /// Common given names, surnames and place names that appear in web-frequency
 /// lists. Not exhaustive — proper nouns cannot be detected reliably without a
 /// reference dictionary, so the rejected file is worth reading.
 const Set<String> _properNouns = {
+  'lauren', 'ashley', 'cambodia', 'victorian',
+  'colin', 'samoa',
+  'estonia', 'katie', 'namibia', 'christina', 'latvia', 'lithuania',
+  'bahamas', 'powell', 'hampton', 'bobby', 'salvador', 'ali', 'monroe', 'tanzania',
+  'stanford', 'soviet',
+  'solomon', 'josh', 'rochester',
+  'tommy', 'springfield', 'oliver', 'congo', 'glen', 'botswana', 'newcastle', 'honolulu', 'dominican', 'chad',
+  'newport', 'bangladesh', 'iceland',
+  'blair', 'victor', 'mario', 'brunswick', 'hudson',
+  'queensland', 'raleigh',
+  'newton',
+  'pete', 'penn', 'lopez',
+  'harrison', 'harvey', 'wallace',
+  'luxembourg', 'joel', 'perry', 'salem', 'luke',
+  'arabic', 'kingston', 'ted',
+  'stanley', 'murphy',
+  'lynn',
+  'todd', 'doug', 'montgomery', 'louisville', 'monica',
+  'reuters', 'bloomberg',
+  'palestinian',
+  'mitsubishi', 'delhi', 'nepal', 'zimbabwe', 'juan',
+  'brad', 'fisher',
+  'norfolk',
+  'norton', 'lanka', 'berkeley',
+  'arabia', 'indianapolis', 'yorkshire',
+  'albany', 'pierre', 'oakland',
+  'britney', 'katrina', 'portuguese', 'halloween',
+  'durham', 'neil', 'robinson', 'jacksonville', 'israeli', 'olympic',
+  'murray',
+  'jefferson', 'lincolnshire',
+  'mercedes',
+  'harvard', 'nike', 'yale', 'princeton', 'adidas', 'reebok',
+  'minneapolis', 'omaha', 'tulsa',
+  'eminem', 'madonna', 'elvis', 'beatles',
+  'rica', 'costa',
+  'walter', 'duncan', 'stuart',
+  'rio',
+  'lebanon', 'kennedy', 'cooper', 'islamic',
+  'broadway', 'hollywood',
+  'charlie', 'francis', 'warren',
+  'saudi', 'kate',
+  'cyprus', 'marc', 'malta',
+  'thai', 'fred', 'afghanistan',
+  'rick', 'donald', 'trevor',
+  'iraqi', 'amsterdam', 'iranian', 'afghan',
+  'ross', 'sri',
+  'gordon', 'rico', 'phil', 'simpson', 'kerry', 'dicke',
+  'kent',
+  'mexican', 'korean', 'thompson', 'brazilian', 'greek', 'turkish',
+  'rhode', 'greg', 'ron', 'clinton', 'cincinnati', 'richmond', 'sierra', 'scottish', 'irish', 'welsh',
+  'tiffany',
+  'matthew', 'anthony', 'franklin', 'morgan', 'columbus', 'andy', 'christopher',
+  'madison', 'jon', 'douglas', 'ken', 'jay', 'valentine', 'apache',
+  'epson', 'nintendo', 'hilton', 'debian', 'ubuntu', 'novell',
+  'birmingham', 'anne', 'alex', 'marshall', 'hamilton', 'siemens',
+  'honda', 'toyota', 'nokia', 'yamaha', 'nissan', 'mazda',
+  'dutch', 'nick', 'danish', 'swedish', 'norwegian', 'finnish', 'polish',
+  'puerto', 'latina', 'latino', 'hispanic', 'anglo', 'euro',
+  'simon', 'pittsburgh', 'cleveland', 'detroit', 'baltimore', 'milwaukee',
   // people
   'john', 'david', 'michael', 'james', 'robert', 'william', 'richard',
   'thomas', 'charles', 'joseph', 'daniel', 'paul', 'mark', 'george', 'peter',
@@ -96,7 +209,7 @@ const Set<String> _properNouns = {
   'portland', 'sam', 'allen', 'switzerland', 'czech', 'howard', 'austria',
   'adam', 'antonio', 'orleans', 'swiss', 'caribbean', 'pacific', 'atlantic',
   'arab', 'lincoln', 'guinea', 'vancouver', 'catholic', 'protestant',
-  'jose', 'jane', 'kim', 'baltimore', 'charlotte',
+  'jose', 'jane', 'kim', 'charlotte',
   'memphis', 'nashville', 'orlando', 'tampa', 'sacramento',
   'brooklyn', 'harlem', 'queens', 'bronx', 'manhattan',
   'hindu', 'buddhist', 'baptist', 'methodist', 'anglican', 'roman',
@@ -156,6 +269,10 @@ const Set<String> _notReallyPlural = {
 /// and "den" all appear here in German, but dropping them would delete real
 /// English vocabulary.
 const Set<String> _germanNoise = {
+  'travesti',
+  'titten',
+  'zus',
+  'deutsch', 'nutten',
   'der', 'das', 'und', 'zum', 'zur', 'mit', 'von', 'ist', 'eine', 'einen',
   'einem', 'einer', 'verzeichnis', 'sich', 'auch', 'werden', 'nicht', 'aber',
   'oder', 'wenn', 'durch', 'nach', 'bei', 'aus', 'dem', 'des', 'als', 'wie',
@@ -228,7 +345,7 @@ String? _rejectionReason(String word, Set<String> all) {
   if (_properNouns.contains(word)) return 'proper noun';
   if (_germanNoise.contains(word)) return 'German, not English';
 
-  final base = _singularOf(word);
+  final base = _singularOf(word, all);
   if (base != null && all.contains(base)) {
     return 'plural of "$base", which is already in the list';
   }
@@ -239,12 +356,19 @@ String? _rejectionReason(String word, Set<String> all) {
 ///
 /// Deliberately conservative: it only strips an ending when the result is
 /// itself in the list, so "boss" and "gas" survive but "records" does not.
-String? _singularOf(String word) {
+String? _singularOf(String word, Set<String> all) {
   if (_notReallyPlural.contains(word)) return null;
   if (word.endsWith('ies') && word.length > 4) {
-    return '${word.substring(0, word.length - 3)}y';
+    final asY = '${word.substring(0, word.length - 3)}y';
+    if (all.contains(asY)) return asY;
+    // "cookies" is not "cooky" — some "-ies" words simply end in "-ie".
+    return word.substring(0, word.length - 1);
   }
   if (word.endsWith('es') && word.length > 3) {
+    // "boxes" drops the whole "es", "conferences" only the "s". Try the
+    // longer stem first: the caller keeps a stem only if the list has it.
+    final withoutS = word.substring(0, word.length - 1);
+    if (all.contains(withoutS)) return withoutS;
     return word.substring(0, word.length - 2);
   }
   if (word.endsWith('s') && !word.endsWith('ss') && word.length > 3) {
