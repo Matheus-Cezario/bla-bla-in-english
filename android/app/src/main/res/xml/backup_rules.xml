@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Auto Backup rules for Android 11 and older.
+
+  Only progress.db is worth keeping: dictionary.db is rebuilt from the bundled
+  asset on first launch, so backing up five megabytes of content the APK
+  already carries would just make every backup slower for nothing.
+
+  The -wal and -shm files travel with it. Restoring the main file on its own
+  would drop whatever the write-ahead log had not folded back in yet.
+-->
+<full-backup-content>
+    <include domain="database" path="progress.db"/>
+    <include domain="database" path="progress.db-wal"/>
+    <include domain="database" path="progress.db-shm"/>
+</full-backup-content>

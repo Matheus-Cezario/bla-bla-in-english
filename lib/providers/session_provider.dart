@@ -43,12 +43,41 @@ class SessionProvider with ChangeNotifier {
       _items.where((item) => item.answeredKind == kind).length;
 
   Future<void> load() async {
+    await _replaceItems(
+      (wordsPerDay) => _sessions.todaySession(wordsPerDay: wordsPerDay),
+    );
+  }
+
+  /// Draws another day's worth of words into the session the user just
+  /// finished, and returns how many were actually added: the dictionary can
+  /// run out, and the UI has to say so instead of looking broken.
+  Future<int> extendSession() => _replaceItems(
+        (wordsPerDay) => _sessions.extendTodaySession(wordsPerDay: wordsPerDay),
+      );
+
+  /// Adds hand-picked words to today's session. Returns how many landed —
+  /// words already queued today are skipped, so this can be less than asked.
+  Future<int> addWords(List<int> wordIds) => _replaceItems(
+        (wordsPerDay) => _sessions.addWordsToTodaySession(
+          wordIds: wordIds,
+          wordsPerDay: wordsPerDay,
+        ),
+      );
+
+  /// Runs [fetch] against the current daily target and swaps in what it
+  /// returns, resuming at the first unanswered item. Returns how many items the
+  /// session gained.
+  Future<int> _replaceItems(
+    Future<List<PracticeItem>> Function(int wordsPerDay) fetch,
+  ) async {
+    final before = _items.length;
+
     _state = SessionState.loading;
     notifyListeners();
 
     try {
       _wordsPerDay = await _settings.wordsPerDay();
-      _items = await _sessions.todaySession(wordsPerDay: _wordsPerDay);
+      _items = await fetch(_wordsPerDay);
       // Resume where the user stopped rather than at the top.
       final next = _items.indexWhere((item) => !item.isAnswered);
       _index = next == -1 ? _items.length : next;
@@ -56,8 +85,12 @@ class SessionProvider with ChangeNotifier {
     } catch (error) {
       _error = error;
       _state = SessionState.failed;
+      notifyListeners();
+      return 0;
     }
+
     notifyListeners();
+    return _items.length - before;
   }
 
   /// Records the user's choice for the item on screen. The UI shows feedback

@@ -3,6 +3,8 @@ import 'package:bla_bla_in_english/components/sentence_text.dart';
 import 'package:bla_bla_in_english/constants.dart';
 import 'package:bla_bla_in_english/models/answer_kind.dart';
 import 'package:bla_bla_in_english/pages/settings_page.dart';
+import 'package:bla_bla_in_english/pages/stats_page.dart';
+import 'package:bla_bla_in_english/pages/word_search_page.dart';
 import 'package:bla_bla_in_english/providers/session_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -26,6 +28,18 @@ class _PracticePageState extends State<PracticePage> {
     });
   }
 
+  Future<void> _openWordSearch() async {
+    await Navigator.of(context).push(
+      MaterialPageRoute<void>(builder: (_) => const WordSearchPage()),
+    );
+  }
+
+  void _openStats() {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(builder: (_) => const StatsPage()),
+    );
+  }
+
   Future<void> _openSettings() async {
     await Navigator.of(context).push(
       MaterialPageRoute<void>(builder: (_) => const SettingsPage()),
@@ -39,15 +53,29 @@ class _PracticePageState extends State<PracticePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Blá Blá in English'),
+        // Three actions leave a narrow phone short of room for the full
+        // title, and a clipped name looks broken; scaling down does not.
+        title: const FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text('Blá Blá in English'),
+        ),
         centerTitle: true,
         actions: [
+          IconButton(
+            onPressed: _openWordSearch,
+            icon: const Icon(Icons.search),
+            tooltip: 'Buscar palavras',
+          ),
+          IconButton(
+            onPressed: _openStats,
+            icon: const Icon(Icons.insights),
+            tooltip: 'Estatísticas',
+          ),
           IconButton(
             onPressed: _openSettings,
             icon: const Icon(Icons.settings),
             tooltip: 'Configurações',
           ),
-          const SizedBox(width: 8),
         ],
       ),
       body: SafeArea(child: _body(session)),
@@ -66,8 +94,9 @@ class _PracticePageState extends State<PracticePage> {
             detail: 'O dicionário está vazio. Gere o banco com '
                 'tool/generate_dictionary.dart e reinstale o app.',
           ),
-        SessionState.ready =>
-          session.current == null ? _Summary(session: session) : _Question(session: session),
+        SessionState.ready => session.current == null
+            ? _Summary(session: session)
+            : _Question(session: session),
       };
 }
 
@@ -166,6 +195,21 @@ class _Summary extends StatelessWidget {
 
   final SessionProvider session;
 
+  /// Queues another day's worth of words. The dictionary can be out of words
+  /// the user has not already seen today, and silently doing nothing would read
+  /// as a broken button — so say it.
+  Future<void> _extend(BuildContext context) async {
+    final messenger = ScaffoldMessenger.of(context);
+    if (await session.extendSession() > 0) return;
+
+    messenger.showSnackBar(
+      const SnackBar(
+        content: Text('Não há mais palavras novas para hoje. '
+            'Use a busca para escolher uma palavra específica.'),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -200,6 +244,11 @@ class _Summary extends StatelessWidget {
               'As palavras que você errou voltam primeiro amanhã.',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            const SizedBox(height: 24),
+            FilledButton(
+              onPressed: () => _extend(context),
+              child: const Text('Praticar mais agora'),
             ),
           ],
         ),
