@@ -12,7 +12,7 @@ import 'dart:io';
 
 import 'package:bla_bla_in_english/data/dictionary_assets.dart';
 
-import 'dictionary_content.dart';
+import 'package:bla_bla_in_english/services/dictionary_content.dart';
 import 'write_dictionary.dart';
 
 /// (sentence, correct, near, wrong)

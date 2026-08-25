@@ -3,6 +3,7 @@ import 'package:bla_bla_in_english/data/app_database.dart';
 import 'package:bla_bla_in_english/pages/practice_page.dart';
 import 'package:bla_bla_in_english/providers/session_provider.dart';
 import 'package:bla_bla_in_english/repositories/backup_repository.dart';
+import 'package:bla_bla_in_english/repositories/custom_word_repository.dart';
 import 'package:bla_bla_in_english/repositories/session_repository.dart';
 import 'package:bla_bla_in_english/repositories/settings_repository.dart';
 import 'package:bla_bla_in_english/repositories/stats_repository.dart';
@@ -28,6 +29,7 @@ class BlaBlaApp extends StatelessWidget {
     final sessions = SessionRepository(database.db);
     final stats = StatsRepository(database.db);
     final backups = BackupRepository(database.db);
+    final customWords = CustomWordRepository(database.db);
 
     return MultiProvider(
       providers: [
@@ -35,6 +37,7 @@ class BlaBlaApp extends StatelessWidget {
         Provider.value(value: sessions),
         Provider.value(value: stats),
         Provider.value(value: backups),
+        Provider.value(value: customWords),
         ChangeNotifierProvider(
           create: (_) => SessionProvider(sessions: sessions, settings: settings),
         ),

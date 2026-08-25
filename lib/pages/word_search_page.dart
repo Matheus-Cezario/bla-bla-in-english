@@ -4,7 +4,9 @@ import 'package:bla_bla_in_english/constants.dart';
 import 'package:bla_bla_in_english/models/word_search_result.dart';
 import 'package:bla_bla_in_english/models/word_status.dart';
 import 'package:bla_bla_in_english/providers/session_provider.dart';
+import 'package:bla_bla_in_english/repositories/custom_word_repository.dart';
 import 'package:bla_bla_in_english/repositories/session_repository.dart';
+import 'package:bla_bla_in_english/repositories/settings_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -33,6 +35,12 @@ class _WordSearchPageState extends State<WordSearchPage> {
   bool _loading = true;
   bool _loadingMore = false;
   bool _adding = false;
+  bool _creating = false;
+
+  /// Null until the settings have been read, and null again if the user has no
+  /// DeepSeek key — which is the normal case, and the one where this screen
+  /// never mentions DeepSeek at all.
+  String? _apiKey;
 
   /// False once a page comes back short, which is how the end of the list
   /// announces itself.
@@ -48,6 +56,12 @@ class _WordSearchPageState extends State<WordSearchPage> {
     super.initState();
     _scroll.addListener(_onScroll);
     _search(_controller.text);
+    _loadApiKey();
+  }
+
+  Future<void> _loadApiKey() async {
+    final key = await context.read<SettingsRepository>().deepSeekApiKey();
+    if (mounted) setState(() => _apiKey = key);
   }
 
   @override
@@ -114,6 +128,35 @@ class _WordSearchPageState extends State<WordSearchPage> {
       _loadingMore = false;
       _hasMore = next.length == SessionRepository.searchPageSize;
     });
+  }
+
+  /// Asks DeepSeek for the word the dictionary does not have, then searches
+  /// again so it can be picked like any other.
+  Future<void> _createWord() async {
+    final term = _controller.text.trim().toLowerCase();
+    final apiKey = _apiKey;
+    if (apiKey == null || _creating) return;
+
+    final messenger = ScaffoldMessenger.of(context);
+    final words = context.read<CustomWordRepository>();
+    setState(() => _creating = true);
+
+    try {
+      await words.create(term, apiKey: apiKey);
+      if (!mounted) return;
+      await _search(term);
+      messenger.showSnackBar(
+        SnackBar(content: Text('"$term" agora está no dicionário.')),
+      );
+    } on WordCreationException catch (error) {
+      messenger.showSnackBar(SnackBar(content: Text(error.message)));
+    } catch (error) {
+      messenger.showSnackBar(
+        SnackBar(content: Text('Não deu para criar a palavra: $error')),
+      );
+    } finally {
+      if (mounted) setState(() => _creating = false);
+    }
   }
 
   void _toggle(WordSearchResult result) {
@@ -219,7 +262,12 @@ class _WordSearchPageState extends State<WordSearchPage> {
   Widget _resultsView(BuildContext context) {
     if (_loading) return const Center(child: CircularProgressIndicator());
     if (_results.isEmpty) {
-      return const _Hint(text: 'Nenhuma palavra encontrada no dicionário.');
+      return _NotFound(
+        term: _controller.text.trim(),
+        apiKeyConfigured: _apiKey != null,
+        creating: _creating,
+        onCreate: _createWord,
+      );
     }
 
     return ListView.separated(
@@ -364,20 +412,76 @@ class _SelectionBar extends StatelessWidget {
   }
 }
 
-class _Hint extends StatelessWidget {
-  const _Hint({required this.text});
+/// What the screen says when the dictionary has nothing for the search.
+///
+/// With a DeepSeek key configured this is not a dead end: the word can be
+/// written on the spot. Without one it stays a plain "not found" — the app
+/// never mentions a service the user has not opted into.
+class _NotFound extends StatelessWidget {
+  const _NotFound({
+    required this.term,
+    required this.apiKeyConfigured,
+    required this.creating,
+    required this.onCreate,
+  });
 
-  final String text;
+  final String term;
+  final bool apiKeyConfigured;
+  final bool creating;
+  final VoidCallback onCreate;
 
   @override
   Widget build(BuildContext context) {
+    // Checked here rather than after the request: the model will happily write
+    // five sentences for "asdfgh" and the user pays for them.
+    final rejection = CustomWordRepository.rejectionReason(term);
+    final small =
+        Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 13);
+
     return Center(
-      child: Padding(
+      child: SingleChildScrollView(
         padding: const EdgeInsets.all(32),
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.bodyMedium,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              '"$term" não está no dicionário.',
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            const SizedBox(height: 20),
+            if (creating) ...[
+              const CircularProgressIndicator(),
+              const SizedBox(height: 16),
+              Text(
+                'Escrevendo as cinco frases e as opções. '
+                'Costuma levar uns 20 segundos.',
+                textAlign: TextAlign.center,
+                style: small,
+              ),
+            ] else if (!apiKeyConfigured)
+              Text(
+                'Configure uma chave do DeepSeek nas Configurações e o app '
+                'pode criar as palavras que faltam.',
+                textAlign: TextAlign.center,
+                style: small,
+              )
+            else if (rejection != null)
+              Text(rejection, textAlign: TextAlign.center, style: small)
+            else ...[
+              FilledButton.icon(
+                onPressed: onCreate,
+                icon: const Icon(Icons.auto_awesome),
+                label: const Text('Criar com o DeepSeek'),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                'Uma requisição na sua conta do DeepSeek.',
+                textAlign: TextAlign.center,
+                style: small,
+              ),
+            ],
+          ],
         ),
       ),
     );

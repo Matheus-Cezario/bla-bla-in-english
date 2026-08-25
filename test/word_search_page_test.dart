@@ -1,7 +1,9 @@
 import 'package:bla_bla_in_english/models/word_search_result.dart';
 import 'package:bla_bla_in_english/models/word_status.dart';
 import 'package:bla_bla_in_english/pages/word_search_page.dart';
+import 'package:bla_bla_in_english/repositories/custom_word_repository.dart';
 import 'package:bla_bla_in_english/repositories/session_repository.dart';
+import 'package:bla_bla_in_english/repositories/settings_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
@@ -15,9 +17,7 @@ class _FakeRepository implements SessionRepository {
   final List<int> offsets = [];
   final List<String> queries = [];
 
-  static final List<String> words = [
-    for (var i = 1; i <= 120; i++) 'palavra${i.toString().padLeft(3, '0')}',
-  ];
+  static final List<String> words = [];
 
   @override
   Future<List<WordSearchResult>> searchWords(
@@ -52,19 +52,67 @@ class _FakeRepository implements SessionRepository {
       super.noSuchMethod(invocation);
 }
 
+/// Settings with only the one answer this screen asks for.
+class _FakeSettings implements SettingsRepository {
+  _FakeSettings(this.key);
+
+  final String? key;
+
+  @override
+  Future<String?> deepSeekApiKey() async => key;
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) =>
+      super.noSuchMethod(invocation);
+}
+
+/// A word creator that records what it was asked for instead of calling out.
+class _FakeCreator implements CustomWordRepository {
+  final List<String> created = [];
+  Object? failWith;
+
+  @override
+  Future<String> create(String word, {required String apiKey}) async {
+    if (failWith != null) throw failWith!;
+    created.add(word);
+    _FakeRepository.words.add(word);
+    return word;
+  }
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) =>
+      super.noSuchMethod(invocation);
+}
+
 void main() {
   late _FakeRepository repository;
+  late _FakeCreator creator;
 
-  Future<void> pumpPage(WidgetTester tester) async {
+  setUp(() {
+    // The creator appends to this list, so each test starts from the same
+    // dictionary.
+    _FakeRepository.words
+      ..clear()
+      ..addAll([
+        for (var i = 1; i <= 120; i++) 'palavra${i.toString().padLeft(3, '0')}',
+      ]);
+  });
+
+  Future<void> pumpPage(WidgetTester tester, {String? apiKey}) async {
     tester.view.physicalSize = const Size(360, 780);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
 
     repository = _FakeRepository();
+    creator = _FakeCreator();
     await tester.pumpWidget(
-      Provider<SessionRepository>.value(
-        value: repository,
+      MultiProvider(
+        providers: [
+          Provider<SessionRepository>.value(value: repository),
+          Provider<SettingsRepository>.value(value: _FakeSettings(apiKey)),
+          Provider<CustomWordRepository>.value(value: creator),
+        ],
         child: const MaterialApp(home: WordSearchPage()),
       ),
     );
@@ -135,14 +183,70 @@ void main() {
     expect(find.text('palavra050'), findsNothing);
   });
 
-  testWidgets('a search with no matches says so', (tester) async {
-    await pumpPage(tester);
+  group('a word the dictionary does not have', () {
+    Future<void> searchMissing(WidgetTester tester) async {
+      await tester.enterText(find.byType(TextField), 'serendipity');
+      await tester.pump(const Duration(milliseconds: 300));
+      await tester.pump();
+    }
 
-    await tester.enterText(find.byType(TextField), 'zzz');
-    await tester.pump(const Duration(milliseconds: 300));
-    await tester.pump();
+    testWidgets('without a key, DeepSeek is never mentioned as an option',
+        (tester) async {
+      await pumpPage(tester);
+      await searchMissing(tester);
 
-    expect(find.textContaining('Nenhuma palavra encontrada'), findsOneWidget);
+      expect(find.textContaining('não está no dicionário'), findsOneWidget);
+      expect(find.text('Criar com o DeepSeek'), findsNothing);
+      expect(find.textContaining('Configurações'), findsOneWidget);
+    });
+
+    testWidgets('with a key, it can be created on the spot', (tester) async {
+      await pumpPage(tester, apiKey: 'sk-test');
+      await searchMissing(tester);
+
+      expect(find.text('Criar com o DeepSeek'), findsOneWidget);
+
+      await tester.tap(find.text('Criar com o DeepSeek'));
+      await tester.pump();
+      await tester.pump();
+
+      expect(creator.created, ['serendipity']);
+      // The screen searched again, so the new word is there to be picked.
+      // Scoped to the list: the search field itself also holds that text.
+      expect(
+        find.descendant(
+          of: find.byType(ListTile),
+          matching: find.text('serendipity'),
+        ),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('a refusal from DeepSeek is shown, not swallowed',
+        (tester) async {
+      await pumpPage(tester, apiKey: 'sk-test');
+      creator.failWith =
+          const WordCreationException('Sua chave do DeepSeek foi recusada.');
+      await searchMissing(tester);
+
+      await tester.tap(find.text('Criar com o DeepSeek'));
+      await tester.pump();
+      await tester.pump();
+
+      expect(find.text('Sua chave do DeepSeek foi recusada.'), findsOneWidget);
+      expect(creator.created, isEmpty);
+    });
+
+    testWidgets('nonsense is refused before a request is paid for',
+        (tester) async {
+      await pumpPage(tester, apiKey: 'sk-test');
+      await tester.enterText(find.byType(TextField), '12345');
+      await tester.pump(const Duration(milliseconds: 300));
+      await tester.pump();
+
+      expect(find.text('Criar com o DeepSeek'), findsNothing);
+      expect(find.textContaining('só letras'), findsOneWidget);
+    });
   });
 
   testWidgets('picking words keeps them through a new search', (tester) async {

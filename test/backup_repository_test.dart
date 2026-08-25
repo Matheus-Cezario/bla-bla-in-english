@@ -4,6 +4,7 @@ import 'package:bla_bla_in_english/data/schema.dart';
 import 'package:bla_bla_in_english/models/answer_kind.dart';
 import 'package:bla_bla_in_english/repositories/backup_repository.dart';
 import 'package:bla_bla_in_english/repositories/session_repository.dart';
+import 'package:bla_bla_in_english/repositories/settings_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -168,6 +169,74 @@ void main() {
     final file = await backups.export();
     await backups.restore(await file.readAsBytes());
     expect(await db.query('answers'), hasLength(3));
+  });
+
+  test('the DeepSeek key never leaves the phone in a backup', () async {
+    await practise();
+    await db.insert('settings',
+        {'key': SettingsRepository.deepSeekApiKeyKey, 'value': 'sk-secret'});
+    await db.insert('settings', {'key': 'words_per_day', 'value': '35'});
+
+    final file = await backups.export();
+    final copy = await databaseFactoryFfi.openDatabase(file.path);
+    final leaked = await copy.query('settings');
+    await copy.close();
+
+    expect(
+      leaked.map((row) => row['key']),
+      ['words_per_day'],
+      reason: 'the key is stripped, the rest of the settings travel',
+    );
+    // Still set on the device that made the backup.
+    expect(await SettingsRepository(db).deepSeekApiKey(), 'sk-secret');
+  });
+
+  test('words created on the phone travel with the backup', () async {
+    await db.insert('custom_words', {
+      'id': 900001,
+      'word': 'serendipity',
+      'frequency_rank': 5000,
+      'created_at': 1,
+    });
+    await db.insert('custom_sentences', {
+      'id': 900002,
+      'word_id': 900001,
+      'position': 1,
+      'text': 'A #serendipity# in sentence 1.',
+    });
+    await db.insert('custom_options', {
+      'id': 900003,
+      'sentence_id': 900002,
+      'text': 'the right meaning',
+      'kind': 0,
+    });
+
+    final file = await backups.export();
+    await db.delete('custom_options');
+    await db.delete('custom_sentences');
+    await db.delete('custom_words');
+
+    await backups.restore(await file.readAsBytes());
+
+    expect((await db.query('custom_words')).single['word'], 'serendipity');
+    expect(await db.query('custom_sentences'), hasLength(1));
+    expect(await db.query('custom_options'), hasLength(1));
+  });
+
+  test('a backup taken before custom words existed still restores', () async {
+    await practise();
+    final file = await backups.export();
+
+    // Roll the copy back to what v1 looked like: no custom-word tables.
+    final old = await databaseFactoryFfi.openDatabase(file.path);
+    for (final table in ['custom_options', 'custom_sentences', 'custom_words']) {
+      await old.execute('DROP TABLE $table');
+    }
+    await old.setVersion(1);
+    await old.close();
+
+    final summary = await backups.restore(await file.readAsBytes());
+    expect(summary.answers, 3, reason: 'an old backup is still a good backup');
   });
 
   test('the export is named by the day it was taken', () {
